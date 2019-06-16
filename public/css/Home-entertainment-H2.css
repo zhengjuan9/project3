@@ -10,11 +10,220 @@
 #navBarH2 {
   width: auto;
   height: 50px;
+  text-align: center;
   overflow: hidden;
   border: 1px solid red;
 }
 #navBarH2 #nav-bar-h2 {
+  position: relative;
   width: 1140px;
   height: 50px;
-  border: 1px solid red;
+  border: 1px solid #210d6b;
+}
+#navBarH2 #nav-bar-h2 #logo-h2 {
+  position: absolute;
+  width: 160px;
+  height: 50px;
+  left: 0;
+  top: 0;
+  text-align: left;
+  display: inline-block;
+  line-height: 50px;
+  font-size: 26px;
+  border: 1px solid #107e99;
+}
+#navBarH2 #nav-bar-h2 #logo-h2 a {
+  color: #616161;
+  font-weight: 400;
+  font-family: Arial;
+}
+#navBarH2 #nav-bar-h2 #nav-buy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: right;
+  line-height: 50px;
+  width: 450px;
+  font-size: 14px;
+  height: 50px;
+  padding-right: 120px;
+  border: 1px solid #107e99;
+}
+#navBarH2 #nav-bar-h2 #nav-buy .buy-par {
+  display: inline-block;
+  text-align: center;
+  width: 45px;
+  height: 50px;
+  color: #616161;
+  padding: 0 2px;
+}
+#navBarH2 #nav-bar-h2 #nav-buy .buy-par:hover {
+  color: #e46d2c;
+}
+#navBarH2 #nav-bar-h2 #nav-buy .buy-btn {
+  width: 110px;
+  height: 30px;
+  display: inline-block;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background: #e46d2c;
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.content-whole {
+  width: 1366px;
+  margin: auto;
+}
+.section {
+  position: relative;
+  overflow: hidden;
+}
+#section1 {
+  height: 700px;
+  background: url(../images/luo/section01_bg.jpg) no-repeat;
+  background-size: 100% 700px;
+  background-position: center center;
+}
+.word {
+  position: relative;
+  color: #fff;
+}
+.sectionCon {
+  width: 1000px;
+  margin: auto;
+  position: relative;
+}
+.sectionCon #wordpan {
+  position: relative;
+  padding: 138px 0 0 0;
+}
+.sectionCon #wordpan img {
+  margin: 29px 0 49px 0;
+}
+.sectionCon #wordpan h3 {
+  font-size: 46px;
+  transition: all 1.5s 0.6s;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.sectionCon #wordpan h5 {
+  font-size: 32px;
+  padding: 16px 0 70px;
+  font-weight: 500;
+  transition: all 1.5s 0.9s;
+}
+.sectionCon #wordpan p {
+  color: #a8afcd;
+  line-height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  margin-left: -5px;
+  transition: all 1.5s 1.2s;
+}
+.sectionCon #wordpan p .line {
+  margin: 0 5px;
+}
+.sectionCon .lighting {
+  position: absolute;
+  top: 0;
+  right: -52px;
+  transition: all 2s 1.6s;
+}
+.sectionCon .Tagging {
+  margin-top: 10px;
+  font-size: 12px;
+  width: 500px;
+  text-align: left;
+  color: #7a7c8b;
+}
+#section2 {
+  background: #212121;
+  height: 760px;
+}
+.text-center {
+  text-align: center;
+}
+.text-center h3 {
+  margin: 30px 0 16px;
+  font-size: 36px;
+  font-weight: 500;
+}
+.swiper-slide p {
+  color: #fff;
+  font-size: 30px;
+  margin: 20px 0 0 0 ;
+  font-family: Microsoft YaHei;
+}
+.arrow_l {
+  position: absolute;
+  left: 50px;
+}
+.arrow_r {
+  position: absolute;
+  right: 50px;
+}
+#section3 {
+  height: 690px;
+  background: url(../images/luo/section03_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section3 .word {
+  margin: 50px 0 0 38px;
+}
+#section3 .word h3 {
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 500;
+}
+#section3 .word p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 20px 0 20px 0;
+}
+#section3 .word .section3-img {
+  margin-top: 28px;
+  width: 320px;
+  height: 100px;
+  background: url(../images/luo/section03_word.png) no-repeat;
+}
+#section3 .word p {
+  margin: 20px 0 0;
+  font-size: 12px;
+}
+#section4 {
+  height: 500px;
+}
+#section4 h5 {
+  font-size: 24px;
+  color: #232227;
+  font-weight: 300;
+  margin: 30px 0 20px;
+  transform: translate3d(0, 0, 0);
+}
+#section4 h3 {
+  font-size: 36px;
+  color: #232227;
+  margin: 28px 0 20px 0;
+  transition: all 1.5s 0.6s;
+}
+#section4 hr {
+  width: 120px;
+  color: #868686;
+  margin: 0 auto;
+  text-align: center;
+}
+#section4 p {
+  font-size: 16px;
+  line-height: 40px;
+  color: #232227;
+  font-family: 'Arial';
+  transition: all 1.5s 0.9s;
+}
+#section4 img {
+  margin: 30px 0 0 0;
 }
