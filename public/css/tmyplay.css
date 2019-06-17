@@ -1,0 +1,66 @@
+.part{
+    width: 1366px;
+    height: 50px;
+    position: relative;
+    text-align: center;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.float{
+    float: left;
+}
+.first{
+    width: 200px;
+    margin-left: 150px;
+    font-size: 25px;
+    color: #616161;
+}
+.intro{
+    margin-left: 800px;
+    text-align: center;
+}
+.outline{
+    font-size: 14px;
+    color: #616161;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+}
+.outline:hover{
+    color: #e46d2c;
+}
+.buy{
+    font-size: 14px;
+    width: 110px;
+    height: 30px;
+    background: #e46d2c;
+    color: white;
+    text-align: center;
+    display: inline-block;
+}
+.two{
+    position: relative;
+    width: 1366px;
+    overflow: hidden;
+}
+.regard{
+    width: 1366px ;
+}
+.hand{
+    position: absolute;
+    width: 600px;
+    top: -10px;
+    margin: -10px 800px;
+}
+.cell{
+    width: 1366px;
+    background: #f9f9f9;
+}
+.cell div{
+    text-align: center;
+    font-size: 10px;
+    color: #616161;
+}
