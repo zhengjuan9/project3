@@ -11,8 +11,8 @@
     //position: fixed;
     @{wid}: auto;
     @{hei}:50px;
-    text-align: center;
-    overflow: hidden;
+    text-align: center
+    overflow:hidden;
     border:1px solid red;
 
      #nav-bar-h2 {
@@ -78,10 +78,8 @@
                 top: 10px;
                 right: 0;
             }
-         }
-
-     }   
-
+        }
+    }   
 }
 
 // 内容部分
@@ -215,6 +213,8 @@
             width: 320px;
             height: 100px;
             background: url(./../images/luo/section03_word.png) no-repeat;
+            @{bg}-size: 100% 100%;
+    @{bg}-position: center center;
         }
         p {
             margin: 20px 0 0;
@@ -256,7 +256,79 @@
     }
 
 }
+#section5 {
+    height: 670px;
+    @{bg}:url('./../images/luo/section05_bg.jpg')no-repeat;
+    @{bg}-size: 100% 100%;
+    @{bg}-position: center center;
 
+    .word {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        color: #232227;
+        h3 {
+            line-height: 48px;
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 500;
+        }
+        .section5Tagging {
+            font-size: 14px;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+    }
+}
 
+#section6 {
+    .word{
+        color: #232227;
+        p {
+            margin: 0 0 25px 0;
+        }
+    }
+    .section6-img {
+        height: 550px;
+        @{bg}:url('./../images/luo/section06_qingxi.jpg') no-repeat;
+        @{bg}-size: 100% 100%;
+        @{bg}-position: center center;
+    }
+}
+#section7 {
+        height: 575px;
+        @{bg}:url('./../images/luo/section07_bg.jpg') no-repeat;
+        @{bg}-size: 100% 100%;
+        @{bg}-position: center center;
+    h3 {
+        margin: 150px 0 20px 0;
+        font-size: 32px;
+        font-family: 'Arial';
+        font-weight: 500;;
+    }
+    h5 {
+        font-weight: 400;
+    }
+}
+
+#section8 {
+    .set8-bg {
+        height: 380px;
+        @{bg}:url('./../images/luo/section08_bg.jpg') no-repeat;
+        @{bg}-size: 100% 100%;
+        @{bg}-position: center center;
+    }
+    h5 {
+        font-weight: 400;
+        font-size: 16px;
+    }
+    h3 {
+        margin: 150px 0 20px 0;
+        font-size: 32px;
+        font-family: 'Arial';
+        font-weight: 500;;
+    }
+
+}
 
 

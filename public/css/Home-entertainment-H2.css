@@ -10,8 +10,8 @@
 #navBarH2 {
   width: auto;
   height: 50px;
-  text-align: center;
-  overflow: hidden;
+  text-align: center
+    overflow:hidden;
   border: 1px solid red;
 }
 #navBarH2 #nav-bar-h2 {
@@ -190,6 +190,8 @@
   width: 320px;
   height: 100px;
   background: url(../images/luo/section03_word.png) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
 }
 #section3 .word p {
   margin: 20px 0 0;
@@ -226,4 +228,70 @@
 }
 #section4 img {
   margin: 30px 0 0 0;
+}
+#section5 {
+  height: 670px;
+  background: url('../images/luo/section05_bg.jpg') no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section5 .word {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  color: #232227;
+}
+#section5 .word h3 {
+  line-height: 48px;
+  margin-bottom: 30px;
+  font-size: 32px;
+  font-weight: 500;
+}
+#section5 .word .section5Tagging {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 30px;
+}
+#section6 .word {
+  color: #232227;
+}
+#section6 .word p {
+  margin: 0 0 25px 0;
+}
+#section6 .section6-img {
+  height: 550px;
+  background: url('../images/luo/section06_qingxi.jpg') no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section7 {
+  height: 575px;
+  background: url('../images/luo/section07_bg.jpg') no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section7 h3 {
+  margin: 150px 0 20px 0;
+  font-size: 32px;
+  font-family: 'Arial';
+  font-weight: 500;
+}
+#section7 h5 {
+  font-weight: 400;
+}
+#section8 .set8-bg {
+  height: 380px;
+  background: url('../images/luo/section08_bg.jpg') no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section8 h5 {
+  font-weight: 400;
+  font-size: 16px;
+}
+#section8 h3 {
+  margin: 150px 0 20px 0;
+  font-size: 32px;
+  font-family: 'Arial';
+  font-weight: 500;
 }
