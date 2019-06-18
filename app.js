@@ -49,7 +49,7 @@ app.get('/H2', function (req, res) {
 });
 // app.use(ejsRouter);
 //配置端口
-app.listen('4567',function () {
+app.listen('6543',function () {
     console.log('开始')
 });
 

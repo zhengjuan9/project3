@@ -8,14 +8,18 @@
   margin: 0 auto;
 }
 #navBarH2 {
+  position: relative;
+  top: 0;
   width: auto;
   height: 50px;
-  color: #ccc;
+  background: rgba(225,225,225,0.9);
   text-align: center;
-  overflow: hidden;
+  box-shadow: 1px 1px 3px #aaaaaa;
+  border-bottom: 1px solid #e0e0e0;
 }
 #navBarH2 #nav-bar-h2 {
   position: relative;
+  text-align: center;
   width: 1140px;
   height: 50px;
 }
