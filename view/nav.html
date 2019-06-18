@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    </style>
+    <link rel="stylesheet" href="/public/fonts/iconfont.css">
+    <link rel="stylesheet" href="/public/css/nav.css">
+    <script src="/public/js/jquery-3.4.0.js"></script>
+</head>
+<body>
+    <div id="nav">
+        <div class="box1">
+            <div class="content">
+                <div id="nav-logo"><a href="" title="首页"><img src="../public/images/logo.png"></a></div>
+                <div id="nav-menu">
+                    <ul class="nav-left">
+                        <li><a href="" id="zj-jgds">激光电视</a></li>
+                        <li><a href="" id="zj-jyyl">家用娱乐</a></li>
+                        <li><a href="" id="zj-bxyl">便携娱乐</a></li>
+                        <li><a href="">服务</a></li>
+                    </ul>
+                    <ul class="nav-right">
+                        <li><a href=""><img src="../public/images/zj/home/user.png" id="user"/></a></li>
+                        <li><a href="">我的订单</a></li>
+                        <li>
+                            <a href=""><span class="iconfont icon-gouwuche"> </span> 购物车(<span>0</span>)</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="box2">
+            <div class="menu-list">
+                <div class="nav-menu-list1">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/lune4kpro.png"/></p>
+                                <p>矅·LUNE 4K Pro</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/w2nav.png"/></p>
+                                <p>皓·LUNE 4K</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/w2nav.png"/></p>
+                                <p>皓·LUNE</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/A1pro.png"/></p>
+                                <p>A1Pro</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/T1.png"/></p>
+                                <p>T1</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/A1.png"/></p>
+                                <p>A1</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-menu-list2">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/H2.png"/></p>
+                                <p>H2</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/z6.png"/></p>
+                                <p>Z6</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/z6x-nav.png"/></p>
+                                <p>Z6 X</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/Z4V.png"/></p>
+                                <p>Z4V</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/N20-nav.png"/></p>
+                                <p>N20</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-menu-list3">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/play.png"/></p>
+                                <p>Play</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/playx.png"/></p>
+                                <p>Play X</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/newz4air.png"/></p>
+                                <p>New Z4Air</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/cc-logo.png"/></p>
+                                <p>CC极光</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <p><img src="../public/images/zj/home/heijincc.png"/></p>
+                                <p>CC极光黑金版</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    $('#zj-jgds').mouseover(function () {
+        $('.nav-menu-list2').hide();
+        $('.nav-menu-list3').hide();
+        $('.box2').show().mouseover(function () {
+            $('.box2').show();
+        }).mouseout(function () {
+            $('.box2').css("display","none");
+        });
+
+        $('.nav-menu-list1').fadeIn("slow");
+    }).mouseout(function () {
+        $('.box2').css("display","none");
+    });
+    $('#zj-jyyl').mouseover(function () {
+        $('.nav-menu-list1').hide();
+        $('.nav-menu-list3').hide();
+        $('.box2').show().mouseover(function () {
+            $('.box2').show();
+        }).mouseout(function () {
+            $('.box2').css("display","none");
+        });
+
+        $('.nav-menu-list2').fadeIn("slow");
+    }).mouseout(function () {
+        $('.box2').css("display","none");
+    });
+    $('#zj-bxyl').mouseover(function () {
+        $('.nav-menu-list1').hide();
+        $('.nav-menu-list2').hide();
+        $('.box2').show().mouseover(function () {
+            $('.box2').show();
+        }).mouseout(function () {
+            $('.box2').css("display","none");
+        });
+
+        $('.nav-menu-list3').fadeIn("slow");
+    }).mouseout(function () {
+        $('.box2').css("display","none");
+    });
+</script>
+</html>
