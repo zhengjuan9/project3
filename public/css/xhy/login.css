@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 13px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #1992f4;
+}
+body {
+  background: #efefef;
+}
+#box {
+  width: 840px;
+  background: white;
+  margin: 20px auto;
+  overflow: hidden;
+  text-align: center;
+}
+#box .h2 {
+  color: #898989;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 60px auto 20px;
+}
+#box .box1 {
+  width: 344px;
+  margin: 0 auto;
+}
+#box .box1 ul li {
+  padding: 5px 0;
+}
+#box .box1 ul li input {
+  height: 42px;
+  width: 100%;
+}
+#box .box1 ul li button {
+  width: 101%;
+  height: 42px;
+  border: none;
+  background: #43a3f4;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+#box .box1 ul .bottom {
+  padding-bottom: 110px ;
+}
+/*# sourceMappingURL=login.css.map */

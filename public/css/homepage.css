@@ -1,0 +1,143 @@
+html,
+body {
+  width: 100%;
+  background: #f7f8f9;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+#main-body1 {
+  width: 100%;
+}
+#main-body1 .swiper-container {
+  top: -19px;
+  width: 100%;
+}
+#main-body1 .swiper-container img {
+  width: 100%;
+}
+#main-body2 {
+  width: 1558px;
+  margin: 0 auto;
+}
+#main-body2 .classify {
+  width: 1140px;
+  margin: 0 auto;
+}
+#main-body2 .classify .classify-title {
+  font-size: 24px;
+  color: #333;
+  width: 1140px;
+  height: 80px;
+  line-height: 90px;
+}
+#main-body2 .classify .classify-title a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #919191;
+  float: right;
+}
+#main-body2 .classify .classify-title a:hover {
+  color: #5e85f1;
+  text-decoration: none;
+}
+#main-body2 .classify ul {
+  height: 390px;
+  text-align: center;
+}
+#main-body2 .classify ul li {
+  width: 370px;
+  height: 390px;
+  margin-right: 10px;
+  float: left;
+  background: white;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+#main-body2 .classify ul li a {
+  text-decoration: none;
+}
+#main-body2 .classify ul li .new-products-title {
+  color: #333;
+  font-size: 20px;
+  height: 35px;
+  line-height: 35px;
+}
+#main-body2 .classify ul li .new-products-info {
+  color: #333;
+  height: 50px;
+  line-height: 30px;
+}
+#main-body2 .classify ul li .new-products-price {
+  color: #5e85f1;
+}
+#main-body2 .classify ul li:hover {
+  box-shadow: 3px 3px 5px #909090;
+}
+.container {
+  margin: 0 auto;
+}
+.container .product {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin-bottom: 20px;
+}
+.container .product .product-box {
+  width: 530px;
+  height: 335px;
+  background: white;
+  position: absolute;
+  left: 210px;
+  bottom: 0;
+}
+.container .product .product-box .product-box-left {
+  height: 220px;
+  float: left;
+  padding: 55px 0;
+}
+.container .product .product-box .product-box-left img {
+  width: 265px;
+}
+.container .product .product-box .product-box-right .title {
+  margin-top: 100px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+.container .product .product-box .product-box-right .info {
+  color: #333;
+}
+.container .product .product-box .product-box-right .price {
+  margin-top: 30px;
+  color: #5e85f1;
+}
+.product-video {
+  width: 1140px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.product-video li {
+  background: white;
+  width: 277px;
+  height: 285px;
+  float: left;
+  text-align: center;
+  margin-right: 8px;
+}
+.product-video li img {
+  width: 277px;
+  height: 225px;
+}
+.product-video li p {
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+}
+.product-video li:hover {
+  box-shadow: 3px 3px 5px #909090;
+}
+.product-video::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/*# sourceMappingURL=homepage.css.map */
