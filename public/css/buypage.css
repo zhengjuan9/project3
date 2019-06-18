@@ -1,0 +1,209 @@
+html,
+body {
+  width: 100%;
+  background: #f7f8f9;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #919191;
+}
+.top {
+  position: relative;
+  top: 1px;
+  width: 100%;
+  background: white ;
+}
+.top .buy-product {
+  width: 1140px;
+  height: 550px;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.top .buy-product a {
+  text-decoration: none;
+}
+.top .buy-product #buy-product-left {
+  width: 450px;
+  height: 500px;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.top .buy-product #buy-product-left .swiper-container {
+  width: 100%;
+}
+.top .buy-product #buy-product-left .swiper-container img {
+  width: 100%;
+}
+.top .buy-product #buy-product-right {
+  width: 550px;
+  height: 500px;
+  margin-left: 100px;
+  margin-top: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.top .buy-product #buy-product-right .goods-title {
+  color: #222;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #919191;
+}
+.top .buy-product #buy-product-right .goods-title h3 {
+  font-size: 26px;
+  display: inline-block;
+  height: 40px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-info {
+  margin-top: 20px;
+  width: 550px;
+  height: 70px;
+  background: #e2e2e2;
+  line-height: 70px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-info .hd-ti {
+  float: left;
+  margin-left: 10px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-info .hd-list {
+  float: left;
+  color: #EC6C00;
+  margin-left: 40px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-info .hd-list b {
+  font-size: 24px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-info .hd-pl {
+  float: right;
+  margin-right: 20px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-info .hd-pl p a {
+  color: #EC6C00;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-server {
+  margin-top: 10px;
+  width: 550px;
+  height: 70px;
+  line-height: 70px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-server .hd-server {
+  float: left;
+  margin-left: 10px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-server .hd-server-con {
+  float: left;
+  margin-left: 20px;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-server .hd-server-con img {
+  position: relative;
+  top: 5px;
+  left: 0;
+}
+.top .buy-product #buy-product-right .goods-attr .attr-server .hd-server-con span {
+  padding: 5px;
+}
+.attr-num {
+  width: 550px;
+  padding-top: 20px;
+  height: 70px;
+}
+.attr-num .hd-num {
+  float: left;
+  margin-left: 10px;
+}
+.attr-num .hd-num-con {
+  float: left;
+  margin-left: 20px;
+  margin-top: -3px;
+  border: 1px solid #919191;
+  border-radius: 3px;
+}
+.attr-num .hd-num-con .change-num {
+  width: 100px;
+}
+.attr-num .hd-num-con .change-num .reduce {
+  display: inline-block;
+  width: 25px;
+  height: 20px;
+  text-align: center ;
+}
+.attr-num .hd-num-con .change-num .text {
+  width: 50px;
+  height: 27px;
+  text-align: center;
+}
+.attr-num .hd-num-con .change-num .add {
+  font-size: 18px;
+  width: 25px;
+  height: 20px;
+  text-align: center ;
+}
+.buyBtn {
+  width: 155px;
+  height: 50px;
+  border-radius: 3px;
+  border: 0;
+  background: #EC6C00;
+  margin-left: 10px;
+  color: white;
+}
+.goods-nav {
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid #bebfc0;
+}
+.goods-nav .container {
+  width: 1140px;
+  height: 50px;
+  margin: 0 auto;
+}
+.goods-nav .container ul li {
+  float: left;
+  margin-right: 25px;
+  padding-right: 25px;
+  border-right: 1px solid #919191;
+  margin-top: 15px;
+}
+.goods-nav .container ul li:last-child {
+  border: 0;
+}
+.active {
+  color: #EC6C00;
+}
+.middle {
+  width: 100%;
+  margin: 0 auto;
+}
+.middle .picture {
+  width: 1140px;
+  margin: 0 auto;
+}
+.middle .size {
+  width: 1140px;
+  margin: 0 auto;
+}
+.middle .size p {
+  background: #f7f8f9;
+  font-size: 20px;
+  color: #919191;
+  text-align: center;
+  height: 65px;
+  line-height: 65px;
+}
+.discuss {
+  width: 1140px;
+  margin: 0 auto;
+}
+.discuss #discuss {
+  background: #f7f8f9;
+  font-size: 20px;
+  color: #919191;
+  text-align: center;
+  height: 65px;
+  line-height: 65px;
+}
+/*# sourceMappingURL=buypage.css.map */
