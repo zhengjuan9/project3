@@ -1,0 +1,393 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+#all{
+    margin: 0 auto;
+    width: 1366px;
+}
+/*加载效果*/
+.Dynamic{
+    transform: translate3d(0, 0, 0) !important;
+    opacity: 1 !important;
+}
+.dela-03{
+    transition: opacity 1s 0.3s, transform 1s 0.3s;
+}
+.dela-06{
+    transition: opacity 1s 0.6s, transform 1s 0.6s;
+}
+
+
+.part{
+    width: 1366px;
+    height: 50px;
+    position: relative;
+    text-align: center;
+}
+.clearfix::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.float{
+    float: left;
+}
+.first-d{
+    width: 200px;
+    height: 30px;
+    margin: 10px 100px;
+}
+.first{
+    width: 200px;
+
+    font-size: 25px;
+    color: #616161;
+}
+.intro{
+    width: 300px;
+    height: 50px;
+    position: absolute;
+    margin: 15px 900px;
+    text-align: center;
+}
+.outline{
+    font-size: 14px;
+    color: #616161;
+    width: 60px;
+    height: 50px;
+    text-align: center;
+}
+.outline:hover{
+    color: #e46d2c;
+}
+.buy-d{
+    width: 110px;
+    height: 30px;
+    position: absolute;
+    margin: -5px 20px;
+    background: #e46d2c;
+    text-align: center;
+}
+.buy{
+    margin-top: 4px;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+}
+.two{
+    position: relative;
+    width: 1366px;
+    overflow: hidden;
+}
+.regard{
+    width: 1366px ;
+}
+.hand{
+    position: absolute;
+    width: 600px;
+    top: -10px;
+    margin: -10px 800px;
+}
+.cell{
+    width: 1366px;
+    background: #f9f9f9;
+}
+.cell div{
+    text-align: center;
+    font-size: 10px;
+    color: #616161;
+}
+/*轮播*/
+.wheel {
+    width: 1366px;
+}
+.shuffling{
+    width: 1366px;
+    height: 150px;
+}
+.shrink{
+    width: 340px;
+    height: 100%;
+}
+
+.skids{
+    width: 1366px;
+    height: 600px;
+    background: url("../images/hb-bj.jpg");
+    position: relative;
+}
+.carplay{
+    width: 800px;
+    position: absolute;
+    margin: 200px 300px;
+}
+.hd-d{
+    font-size: 36px;
+    color: white;
+    text-align: center;
+    transition: opacity 1.5s 0.3s, transform 1.5s 0.3s;
+}
+.hd-x{
+    color: white;
+    font-size: 12px;
+    margin: 40px;
+    text-align: center;
+}
+.hd-d-2{
+    width: 1366px;
+    height: 600px;
+    background: url("../images/4-bg.jpg")50%;
+    position: relative;
+}
+.carry{
+    position: absolute;
+    margin: 220px 160px;
+}
+.c-d{
+    margin-bottom: 80px;
+    color: white;
+}
+.c-d-x{
+    font-size: 25px;
+    margin-bottom: 30px;
+    transition: opacity 1.5s 0.3s, transform 1.5s 0.3s;
+}
+
+.c-d-p p{
+    margin-top: 10px;
+}
+.c-d-l{
+    color: #a0a1a5;
+}
+.servo{
+    width: 1366px;
+    height: 800px;
+    background: url("../images/5-bg.jpg");
+    background-size: 100%;
+    text-align: center;
+}
+.s-p{
+    position: absolute;
+    margin: 100px 330px;
+}
+.s-d{
+    font-size: 25px;
+    color: white;
+    padding: 50px;
+    transition: opacity 1s 0.3s, transform 1s 0.3s;
+}
+.s-x{
+    font-size: 10px;
+    color: white;
+    transition: opacity 1s 0.6s, transform 1s 0.6s;
+}
+.s-x p{
+    padding: 5px;
+}
+.projection{
+    width: 1366px;
+    height: 600px;
+    background: url("../images/6-bg.jpg");
+    background-size: 100%;
+}
+.p-t{
+    width: 650px;
+    height: 350px;
+    position: absolute;
+    margin: 110px 175px;
+    transition: opacity 1s 2.1s, transform 1s 2.1s;
+}
+.p-z{
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 150px;
+}
+.pz-d{
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+.pz-d-1{
+    transition: opacity 1s 0.3s, transform 1s 0.3s;
+}
+.pz-d-2{
+    transition: opacity 1s 0.6s, transform 1s 0.6s;
+}
+.pz-x p{
+    font-size: 12px;
+    color: #a0a1a5;
+    margin-bottom: 10px;
+}
+.pz-t-1{
+    transition: opacity 1s 1.5s, transform 1s 1.5s;
+}
+.pz-t-2{
+    transition: opacity 1s 1.8s, transform 1s 1.8s;
+}
+.pz-t img{
+    width: 200px;
+    margin-bottom: 20px;
+    margin-top: 145px;
+}
+.pz-t p{
+    font-size: 12px;
+    color: #a0a1a5;
+}
+/*移动图*/
+.hdr{
+    width: 1366px;
+}
+.hdr-z{
+    width: 100%;
+    height: 200px;
+    background: #1c1c1c;
+    text-align: center;
+}
+.hdr-d-z{
+    color: #f9f9f9;
+    font-size: 30px;
+    padding: 40px;
+    transform: translate3d(0, 0, 0) !important;
+    opacity: 1 !important;
+    transition: opacity 1.5s 0.3s, transform 1.5s 0.3s;
+}
+.hdr-d-x p{
+    color: #a0a1a5;
+    font-size: 12px;
+    padding: 5px;
+    font-weight: bolder;
+}
+.hrd-t-b{
+    width: 1366px;
+    height: 600px;
+    background: url("../images/07-b.jpg");
+    background-size: 100%;
+}
+.hrd-t-m{
+    width: 1366px;
+    height: 600px;
+}
+/*小巧*/
+.bijou{
+    width: 1366px;
+    height: 700px;
+
+}
+.bj-z{
+    width: 450px;
+    height: 400px;
+    position: absolute;
+    margin: 250px 110px;
+}
+.bj-z div{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.bj-z p{
+    font-size: 14px;
+    color: #a0a1a5;
+    margin: 15px 0;
+}
+.bj-t{
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    margin: 100px 665px;
+}
+.bj-t-b{
+    width: 700px;
+}
+.divide{
+    width: 1366px;
+    height: 930px;
+    background: #f2f3f7;
+}
+.did-t{
+    width: 1200px;
+    position: absolute;
+    margin: 30px 80px;
+}
+.lyf{
+    width: 1366px;
+    height: 835px;
+    background: url("../images/15-bg-01.jpg");
+    background-size: 100%;
+    text-align: center;
+}
+.lyf-z{
+    width: 700px;
+    height: 200px;
+    position: absolute;
+    margin: 60px 330px;
+}
+.lyf-z-d{
+    font-size: 40px;
+    color: #f9f9f9;
+    padding: 30px;
+}
+.lyf-z p{
+    font-size: 14px;
+    color: white;
+    padding: 5px;
+}
+.lyf-t{
+    width: 400px;
+    height: 370px;
+    position: absolute;
+    margin: 615px 650px;
+}
+.lyf-t img{
+    width: 400px;
+    height:220px;
+}
+.b-x{
+    width: 1366px;
+    height: 200px;
+
+}
+.b-x-z{
+    width: 1000px;
+    height: 140px;
+    position: absolute;
+    margin: 20px 180px;
+    border-bottom: 4px solid #a0a1a5;
+}
+.b-x-z ul li{
+    width: 185px;
+    height: 110px;
+    float: left;
+    text-align: center;
+    margin: 30px 70px;
+    border-bottom: 1px solid #000000;
+}
+.zt-d{
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+.zt-x{
+    font-size: 12px;
+    font-weight: bolder;
+}
+.lifetime{
+    width: 1366px;
+    height: 600px;
+    background: url("../images/18-bg-1.jpg");
+    background-size: 100%;
+    text-align: center;
+}
+.lifetime-d{
+    font-size: 35px;
+    color: white;
+    padding: 40px;
+}
+.lifetime-x{
+    font-size: 14px;
+    color: #a0a1a5;
+    padding: 10px;
+}
+.lifetime-x p{
+    margin-bottom: 10px;
+}

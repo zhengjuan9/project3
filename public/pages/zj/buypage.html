@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <link rel="stylesheet" href="public/css/buypage.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+<body>
+<!-- 导航栏 -->
+<%-include ../../../view/nav.html%>
+<div class="top">
+    <div class="buy-product">
+        <div id="buy-product-left">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="public/images/zj/buy/Z6X1.jpg"/></div>
+                    <div class="swiper-slide"><img src="public/images/zj/buy/Z6X2.jpg"/></div>
+                    <div class="swiper-slide"><img src="public/images/zj/buy/Z6X3.jpg"/></div>
+                    <div class="swiper-slide"><img src="public/images/zj/buy/Z6X4.jpg"/></div>
+                </div>
+
+                <!-- 分页器 -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div id="buy-product-right">
+            <div class="goods-title">
+                <h3> 极米Z6X </h3>
+                <p>1080P全高清分辨率/智能辅助校正/运动补偿无拖影/哈曼卡顿音响/2D转3D。 </p>
+            </div>
+            <div class="goods-attr">
+                <ul>
+                    <li class="attr-info">
+                        <div class="hd-ti">现价</div>
+                        <div class="hd-list">
+                            <p><span><b> 2699 </b>元</span></p>
+                        </div>
+                        <div class="hd-pl">
+                            <p><a href="">查看评价</a></p>
+                        </div>
+                    </li>
+
+                    <li class="attr-server">
+                        <div class="hd-server">服务</div>
+                        <div class="hd-server-con">
+                            <a href="" title=" 满59元顺丰包邮 ">
+                                <img src="public/images/zj/buy/sf.jpg"><span> 满59元顺丰包邮 </span>
+                            </a>
+                            <a href="" title=" 7天无理由退换 ">
+                                <img src="public/images/zj/buy/7.png"><span> 7天无理由退换 </span>
+                            </a>
+                            <a href=" " title=" 买贵补差 ">
+                                <img src="public/images/zj/buy/bu.png"><span> 买贵补差 </span>
+                            </a>
+                        </div>
+                    </li>
+                    <!-- 真实商品显示数量 -->
+                    <li class="attr-num">
+                        <div class="hd-num">数量</div>
+                        <div class="hd-num-con">
+                                <span class="change-num">
+                                    <a class="reduce">—</a>
+                                    <input type="text" name="number" id="goods_number" class="text" value="1">
+                                    <a class="add">＋</a>
+                                </span>
+                        </div>
+                    </li>
+                    <li>
+                        <input type="button" class="buyBtn" value="加入购物车">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="goods-nav">
+        <div class="container">
+            <ul>
+                <li><a class="active" href="">产品详情</a></li>
+                <li><a href="#size">规格参数</a></li>
+                <li><a href="#discuss">评价晒单</a></li>
+                <li><a href="">立即咨询</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="middle">
+    <div class="picture">
+        <img src="public/images/zj/buy/2019032611451848528.jpg"/>
+        <img src="public/images/zj/buy/2019033009395721581.jpg"/>
+        <img src="public/images/zj/buy/2018060116052077708.jpg"/>
+    </div>
+    <div class="size">
+        <p id="size">规格参数</p>
+        <img src="public/images/zj/buy/2019040117581135397.jpg"/>
+    </div>
+    <div class="discuss">
+        <p id="discuss">评价晒单</p>
+        <div class="discuss-con">
+            <div class="discuss-nav">
+                <a href="">全部评论</a>
+                <a href="">好评(<span>0</span>)</a>
+                <a href="">中评(<span>0</span>)</a>
+                <a href="">差评(<span>0</span>)</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        direction: 'horizontal', // 垂直切换选项
+        loop: true, // 循环模式选项
+        autoplay:true,//自动播放
+
+        // 分页器
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+
+</script>
+</html>
