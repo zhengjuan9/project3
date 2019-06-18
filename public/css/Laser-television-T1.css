@@ -1,0 +1,428 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+}
+p {
+  font-family: Arial;
+}
+.content-whole {
+  width: 1366px;
+  margin: auto;
+}
+.section {
+  position: relative;
+}
+.text-center {
+  text-align: center;
+}
+.word {
+  position: relative;
+}
+.section {
+  position: relative;
+}
+#section {
+  height: 580px;
+  background: url(../images/luo/Laser-television.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section1 {
+  height: 720px;
+  background: url(../images/luo/section1a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section1 .word h3 {
+  color: #dbb872;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 75px 0 0;
+  font-family: FZBoYaFangKanSongS;
+}
+#section1 .word hr {
+  width: 88px;
+  height: 2px;
+  background: #dbbf83;
+  margin: 0 auto;
+  border: none;
+  position: relative;
+}
+#section1 .word p {
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section1 .product-banner-tip {
+  position: absolute;
+  font-size: 12px;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+#section2 {
+  height: 760px;
+  background: url(../images/luo/section2a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section2 .word h3 {
+  color: #dbb872;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 75px 0 0;
+  font-family: FZBoYaFangKanSongS;
+}
+#section2 .word hr {
+  width: 88px;
+  height: 2px;
+  background: #dbbf83;
+  margin: 40px auto;
+  border: none;
+  position: relative;
+}
+#section2 .word p {
+  font-size: 16px;
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section2 .section-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+#section2 .section-footer ul {
+  display: inline-block;
+  cursor: pointer;
+}
+#section2 .section-footer ul li {
+  float: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 25px;
+  border-right: 1px solid #fff;
+  height: 20px;
+  line-height: 20px;
+}
+#section3 {
+  height: 1050px;
+  background: url(../images/luo/asection3a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section3 .word h3 {
+  color: #dbb872;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 58px 0 0;
+  font-family: FZBoYaFangKanSongS;
+}
+#section3 .word hr {
+  width: 88px;
+  height: 2px;
+  background: #dbbf83;
+  margin: 40px auto;
+  border: none;
+  position: relative;
+}
+#section3 .word p {
+  font-size: 16px;
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section3 .small-img {
+  position: absolute;
+  left: 50%;
+  margin-left: -615px;
+  bottom: 55px;
+}
+#section3 .section-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+#section3 .section-footer ul {
+  display: inline-block;
+  cursor: pointer;
+}
+#section3 .section-footer ul li {
+  float: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 25px;
+  border-right: 1px solid #fff;
+  height: 20px;
+  line-height: 20px;
+}
+#section4 {
+  height: 920px;
+  background: url(../images/luo/section4a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section4 .word h3 {
+  color: #dbb872;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 95px 0 0;
+  font-family: FZBoYaFangKanSongS;
+}
+#section4 .word hr {
+  width: 88px;
+  height: 2px;
+  background: #dbbf83;
+  margin: 40px auto;
+  border: none;
+  position: relative;
+}
+#section4 .word p {
+  font-size: 16px;
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section4 .section-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+#section4 .section-footer ul {
+  display: inline-block;
+  cursor: pointer;
+}
+#section4 .section-footer ul li {
+  float: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 25px;
+  border-right: 1px solid #fff;
+  height: 20px;
+  line-height: 20px;
+}
+#section5 {
+  height: 740px;
+  background: url(../images/luo/section5a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section5 .word h3 {
+  color: #dbb872;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 95px 0 0;
+  font-family: FZBoYaFangKanSongS;
+}
+#section5 .word hr {
+  width: 88px;
+  height: 2px;
+  background: #dbbf83;
+  margin: 40px auto;
+  border: none;
+  position: relative;
+}
+#section5 .word p {
+  font-size: 16px;
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section5 .people {
+  position: absolute;
+  left: 50%;
+  margin-left: -189px;
+  bottom: 71px;
+  z-index: 2;
+  transition: z;
+}
+#section5 img {
+  width: auto;
+  height: auto;
+  max-width: 85%;
+}
+#section5 .section-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+#section5 .section-footer ul {
+  display: inline-block;
+  cursor: pointer;
+}
+#section5 .section-footer ul li {
+  float: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 25px;
+  border-right: 1px solid #fff;
+  height: 20px;
+  line-height: 20px;
+}
+#section6 {
+  height: 790px;
+  background: url(../images/luo/section6a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section6 .word h3 {
+  color: #dbb872;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 95px 0 0;
+  font-family: FZBoYaFangKanSongS;
+}
+#section6 .word hr {
+  width: 88px;
+  height: 2px;
+  background: #dbbf83;
+  margin: 40px auto;
+  border: none;
+  position: relative;
+}
+#section6 .word p {
+  font-size: 16px;
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section6 .people {
+  position: absolute;
+  left: 50%;
+  margin-left: -189px;
+  bottom: 71px;
+  z-index: 2;
+  transition: z;
+}
+#section6 img {
+  width: auto;
+  height: auto;
+  max-width: 85%;
+}
+#section6 .section-footer {
+  width: 100%;
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+}
+#section6 .section-footer ul {
+  display: inline-block;
+  cursor: pointer;
+}
+#section6 .section-footer ul li {
+  float: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 25px;
+  border-right: 1px solid #fff;
+  height: 20px;
+  line-height: 20px;
+}
+#section7 {
+  height: 850px;
+  background: url(../images/luo/section7a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section7 .word h3 {
+  color: #dbb872;
+  font-size: 32px;
+  font-weight: 400;
+  padding: 95px 0 0;
+  font-family: FZBoYaFangKanSongS;
+}
+#section7 .word hr {
+  width: 88px;
+  height: 2px;
+  background: #dbbf83;
+  margin: 40px auto;
+  border: none;
+  position: relative;
+}
+#section7 .word p {
+  font-size: 16px;
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section7 .word a {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #cbb27a;
+  margin: 25px 0 0 0;
+}
+#section7 .icon-list1 {
+  position: relative;
+  margin: 50px 0 30px;
+}
+#section7 .icon-list1 li {
+  display: inline-block;
+  margin: 0 78px 0 0;
+}
+#section7 .icon-list1 li:nth-last-of-type(1) {
+  margin-right: 0;
+}
+#section7 .icon-list2 p {
+  color: #dbbf83;
+  margin-top: 20px;
+  font-size: 18px;
+}
+#section8 {
+  height: 360px;
+  background: url(../images/luo/section8a_bg.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: center center;
+}
+#section8 .sec-con {
+  width: 1000px;
+  position: relative;
+  height: 100%;
+  margin: auto;
+}
+#section8 .sec-con .word {
+  position: absolute;
+  top: 136px;
+  right: 0px;
+}
+#section8 .sec-con .word h3 {
+  color: #dbb872;
+  font-size: 32px;
+  font-weight: 400;
+  font-family: FZBoYaFangKanSongS;
+}
+#section8 .sec-con .word p {
+  font-size: 16px;
+  color: #a7a7a7;
+  line-height: 26px;
+  margin: 30px 0 0 0;
+}
+#section8 .sec-con .word a {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #cbb27a;
+  margin: 25px 0 0 0;
+}
+#section8 .sec-con .pic {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#explanation {
+  height: 300px;
+  background: url('../images/luo/noDuty.jpg') no-repeat;
+  background-position: center center;
+}

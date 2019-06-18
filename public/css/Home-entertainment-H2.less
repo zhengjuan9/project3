@@ -2,24 +2,27 @@
 @wid:width;
 @hei:height;
 
+
 * {padding: 0;margin: 0;list-style: none;text-decoration: none;}
 .con{
     margin: 0 auto;
 }
 //购买导航
 #navBarH2 {
-    //position: fixed;
+    // position: fixed;
+    // z-index: 50;
     @{wid}: auto;
     @{hei}:50px;
-    text-align: center
+    color: #ccc;
+    text-align: center;
     overflow:hidden;
-    border:1px solid red;
+    // border:1px solid red;
 
      #nav-bar-h2 {
         position: relative;
         @{wid}: 1140px;
         @{hei}: 50px;
-        border:1px solid rgb(33, 13, 107);
+        // border:1px solid rgb(33, 13, 107);
 
         #logo-h2{
             position: absolute;
@@ -31,7 +34,7 @@
             display: inline-block;
             line-height: 50px;
             font-size: 26px;
-            border:1px solid rgb(16, 126, 153);
+            // border:1px solid rgb(16, 126, 153);
 
             a {
                 color: #616161;
@@ -49,7 +52,7 @@
             font-size: 14px;
             height: 50px;
             padding-right: 120px;
-            border:1px solid rgb(16, 126, 153);
+            // border:1px solid rgb(16, 126, 153);
 
             .buy-par {
                 display: inline-block;
@@ -81,7 +84,7 @@
         }
     }   
 }
-
+// #Ablank{width: 100%;height: 50px;opacity: 0;}
 // 内容部分
 .content-whole{
     @{wid} : 1366px;
@@ -90,7 +93,6 @@
 .section{
     position: relative;
     overflow: hidden;
-
 }
 #section1 {
     height:700px; 
@@ -318,17 +320,226 @@
         @{bg}-size: 100% 100%;
         @{bg}-position: center center;
     }
-    h5 {
-        font-weight: 400;
-        font-size: 16px;
-    }
-    h3 {
-        margin: 150px 0 20px 0;
-        font-size: 32px;
-        font-family: 'Arial';
-        font-weight: 500;;
-    }
+    .word {
+        position: absolute;
+        right: 0;
+        top: 40px;
+        
 
+        h4 {
+            font-weight: 400;
+            font-size: 24px;
+        }
+        h3 {
+            margin: 35px 0 20px 0;
+            font-size: 32px;
+            font-family: 'Arial';
+            font-weight: 500;
+        }
+        p {
+            font-weight: 400;
+            font-family:'Arial' ;
+        }
+    }
+    .set8-img {
+        position: absolute;
+        top: -50px;
+    }
 }
 
+#section9 {
+    .set9-bg {
+        position: relative;
+        height: 680px;
+        @{bg}:url('./../images/luo/fragment4_bg.jpg') no-repeat;
+        @{bg}-size: 100% 100%;
+        @{bg}-position: center center;
+    }
+    h1{height: 35px;}
+    h3{margin: 0 0 30px;}
+    p {
+        font-family: 'Arial';
+        font-weight: 400;
+        color: #e0e0e0;
+    }
+    .animation-layout {
+            text-align: center;
+            color: #fff;
+            ul {
+                margin-top: 50px;
 
+                li {
+                    display: inline-block;
+                    vertical-align: top;
+                    text-align: left;
+                    font-family: Arial;
+                    h3 {
+                        margin: 0;
+                        font-weight: 400;
+                    }
+                .line-wrap {
+                    position: relative;
+                    color: #f6f6f6;
+                    width: 577px;
+                    .line1 {
+                        text-align: left;
+                        img {
+                            display: block;
+                        }
+                    }
+                    .line2 {
+                        text-align: left; 
+                        img {
+                            display: block;
+                        }
+                    }
+                }
+                h5 {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+        }
+        .num {
+            font-size: 36px;
+            color: #66e4f3;
+        }
+    }
+    ul:nth-child(2) .line1 img {
+        width: 81%;
+        height: 30px;
+    }
+    ul:nth-child(2) .line2 img {
+        width: 100%;
+        height: 30px;
+    }
+}
+
+#section10 {
+    .word {
+        color: #232227;
+        margin: 30px 0 0 10px;
+
+        h6 {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom:20px;
+        }
+    }
+    .text-center{
+        ul{
+            display: block;
+            // height: 420px;
+            margin: 35px 0 10px 0;
+            li {
+                display: inline-block;
+                margin-right: 30px;
+                h5 {
+                    margin: 28px 0 20px ;
+                    font-size: 15px;
+                    color: #4c8ae3;
+                }
+            }
+        }
+        ul li:nth-last-of-type(1) {
+            margin-right: 0 
+        }
+    }   
+}
+
+#section11 {
+    
+        height: 1200px;
+        @{bg}:url('./../images/luo/section17_bg.jpg') no-repeat;
+        @{bg}-size: 100% 100%;
+        @{bg}-position: center center;
+    
+    .text-center{
+        h3{
+            color: #2b2b2b;
+            line-height: 45px;
+            margin: 55px 0 20px;
+        }
+        p{
+            color: #585d60;
+            margin-bottom: 10px;
+        }
+        img{
+            margin: 30px 0 0;
+        }
+    }
+    .animation-layout {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate3d(0, 30px, 0);
+        transition: all 1.5s 1.2s;
+    
+    }
+    .img1{
+        position: absolute;
+        left: 50%;       
+        margin-left: -979px;       
+        top: 173px;
+    }
+    .img2{
+        position: absolute;
+        left: 50%;
+        margin-left: -979px;
+        top: 173px;
+        z-index: 2;
+    }
+    .img3{
+        position: absolute;
+        left: -248px;
+        top: 364px;
+    }
+    .img4{
+        position: absolute;
+        left: -78px;
+        top: 364px;
+        z-index: 1;
+    }
+    .img5{
+        position: absolute;
+        right: -102px;
+        top: 364px;
+        z-index: 1;
+    }
+    .img6{
+        position: absolute;
+        right: -183px;
+        top: 364px;
+    }
+    .more{
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+    }
+}
+
+#section12{
+    height: 570px;
+    @{bg}:url('./../images/luo/section24_bg.jpg') no-repeat;
+    @{bg}-size: 100% 100%;
+    @{bg}-position: center center;
+    
+    h3{
+        margin: 100px 0 40px;
+    }
+    p{
+        margin: 0 0 60px;
+        line-height: 24px;
+        font-weight: 400;
+        font-family: Arial;
+    }
+}
+#explanation{
+    height: 300px;
+    @{bg}:url('./../images/luo/noDuty.jpg') no-repeat;
+    @{bg}-position: center center;
+}
