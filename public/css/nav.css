@@ -1,0 +1,86 @@
+body,
+html {
+  width: 100%;
+}
+#nav {
+  width: 100%;
+  font: 14px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+  color: #333;
+}
+#nav a {
+  text-decoration: none;
+  height: 80px;
+  color: #333;
+  display: inline-block;
+}
+#nav a:hover {
+  color: #5e85f1;
+}
+#nav .box1 {
+  width: 100%;
+  background: white;
+}
+#nav .box1 .content {
+  width: 1366px;
+  margin: 0 auto;
+  height: 80px;
+}
+.nav-left li {
+  float: left;
+  margin-left: 20px;
+  line-height: 80px;
+}
+#nav-logo {
+  float: left;
+  line-height: 90px;
+  margin-left: 110px;
+  margin-right: 10px;
+}
+.nav-right {
+  float: right;
+  margin-right: 110px;
+}
+.nav-right li {
+  margin-left: 20px;
+  float: left;
+  line-height: 80px;
+}
+.nav-right li #user {
+  margin-top: 16px;
+}
+.box2 {
+  width: 100%;
+  background: #E6E7EF;
+  display: none;
+  position: absolute;
+  z-index: 2;
+}
+.box2 .menu-list {
+  margin: 0 auto;
+  height: 145px;
+  width: 1366px;
+  background: #E6E7EF;
+}
+.box2 .menu-list .nav-menu-list1,
+.box2 .menu-list .nav-menu-list2,
+.box2 .menu-list .nav-menu-list3 {
+  display: none;
+}
+.box2 .menu-list .nav-menu-list1 li,
+.box2 .menu-list .nav-menu-list2 li,
+.box2 .menu-list .nav-menu-list3 li {
+  float: left;
+  margin: 0 5px;
+}
+.box2 .menu-list .nav-menu-list1 li p,
+.box2 .menu-list .nav-menu-list2 li p,
+.box2 .menu-list .nav-menu-list3 li p {
+  text-align: center ;
+}
+.box2 .menu-list .nav-menu-list1 li p img,
+.box2 .menu-list .nav-menu-list2 li p img,
+.box2 .menu-list .nav-menu-list3 li p img {
+  width: 120px;
+  background-size: cover;
+}
+/*# sourceMappingURL=nav.css.map */
