@@ -53,12 +53,13 @@ html {
   background: #E6E7EF;
   display: none;
   position: absolute;
-  z-index: 2;
+  z-index: 999;
 }
 .box2 .menu-list {
   margin: 0 auto;
   height: 145px;
   width: 1366px;
+  margin-left: 350px;
   background: #E6E7EF;
 }
 .box2 .menu-list .nav-menu-list1,
