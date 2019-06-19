@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../css/xhy/onlyone.css">
+    <link rel="stylesheet" href="public/css/xhy/onlyone.css">
 </head>
 <style>
 </style>
 <body>
+
+<div class="nav">
+    <%-include ../../../view/nav.html%>
+</div>
     <div id="box">
         <div class="left">
             <ul>
                 <li class="h2">账户管理</li>
-                <a href="javascript:;"><li class="1" data-index="0">基本资料</li></a>
-                <a href="javascript:;"><li data-index="1">账户安全</li></a>
+                <a href="centerbase"><li class="1" data-index="0">基本资料</li></a>
+                <a href="centeruser"><li data-index="1">账户安全</li></a>
             </ul>
             <ul>
                 <li class="h2">我的资产</li>
-                <a href="javascript:;"><li data-index="3">我的优惠券</li></a>
-                <a href="javascript:;"><li data-index="4">我的现金券</li></a>
+                <a href="centercoupon"><li data-index="3">我的优惠券</li></a>
+                <a href="centercash"><li data-index="4">我的现金券</li></a>
             </ul>
             <ul>
                 <li class="h2">订单中心</li>
-                <a href="javascript:;"><li data-index="5">我的订单</li></a>
-                <a href="javascript:;"><li data-index="6">收货地址</li></a>
+                <a href="centerorder"><li data-index="5">我的订单</li></a>
+                <a href="centeraddress"><li data-index="6">收货地址</li></a>
             </ul>
             <ul class="nobottom">
                 <li class="h2">售后服务</li>
-                <a href="javascript:;"><li data-index="7">退还处理</li></a>
-                <a href="javascript:;"><li data-index="8">维修处理</li></a>
-                <a href="javascript:;"><li data-index="9">价格保护</li></a>
+                <a href="centerreturn"><li data-index="7">退还处理</li></a>
+                <a href="centerrepair"><li data-index="8">维修处理</li></a>
             </ul>
         </div>
         <div class="right">
                 <div class="rightbox1">
-                    <div class="h2">我的优惠卷</div>
+                    <div class="h2">我的现金卷</div>
                     <div class="ul chulimianbaoxue">
                         <span class="li chulibg">未使用（0）</span>
                         <span class="li">已使用（0）</span>
@@ -46,7 +49,7 @@
                             <div class="c-price">
                                 <em>¥</em>
                                 <strong>10</strong>
-                                <span class="type">优惠券</span>
+                                <span class="type">现金券</span>
                             </div>
                             <div class="c-limit">
                                 满79可用
@@ -84,7 +87,7 @@
                                 <div class="c-price">
                                     <em>¥</em>
                                     <strong>10</strong>
-                                    <span class="type">优惠券</span>
+                                    <span class="type">现金券</span>
                                 </div>
                                 <div class="c-limit">
                                     满79可用
@@ -122,7 +125,7 @@
                                 <div class="c-price">
                                     <em>¥</em>
                                     <strong>10</strong>
-                                    <span class="type">优惠券</span>
+                                    <span class="type">现金券</span>
                                 </div>
                                 <div class="c-limit">
                                     满79可用
@@ -160,6 +163,9 @@
 
         </div>
     </div>
+<div class="footer">
+    <%-include ../../../view/footer.html%>
+</div>
 </body>
 <script>
 //         var a=document.querySelectorAll('a');

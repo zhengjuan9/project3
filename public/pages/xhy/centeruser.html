@@ -3,65 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="../../css/xhy/onlyone.css">
+    <link rel="stylesheet" href="public/css/xhy/onlyone.css">
 </head>
 <style>
 </style>
 <body>
+
+<div class="nav">
+    <%-include ../../../view/nav.html%>
+</div>
     <div id="box">
         <div class="left">
             <ul>
                 <li class="h2">账户管理</li>
-                <a href="javascript:;"><li class="1" data-index="0">基本资料</li></a>
-                <a href="javascript:;"><li data-index="1">账户安全</li></a>
+                <a href="centerbase"><li class="1" data-index="0">基本资料</li></a>
+                <a href="centeruser"><li data-index="1">账户安全</li></a>
             </ul>
             <ul>
                 <li class="h2">我的资产</li>
-                <a href="javascript:;"><li data-index="3">我的优惠券</li></a>
-                <a href="javascript:;"><li data-index="4">我的现金券</li></a>
+                <a href="centercoupon"><li data-index="3">我的优惠券</li></a>
+                <a href="centercash"><li data-index="4">我的现金券</li></a>
             </ul>
             <ul>
                 <li class="h2">订单中心</li>
-                <a href="javascript:;"><li data-index="5">我的订单</li></a>
-                <a href="javascript:;"><li data-index="6">收货地址</li></a>
+                <a href="centerorder"><li data-index="5">我的订单</li></a>
+                <a href="centeraddress"><li data-index="6">收货地址</li></a>
             </ul>
             <ul class="nobottom">
                 <li class="h2">售后服务</li>
-                <a href="javascript:;"><li data-index="7">退还处理</li></a>
-                <a href="javascript:;"><li data-index="8">维修处理</li></a>
-                <a href="javascript:;"><li data-index="9">价格保护</li></a>
+                <a href="centerreturn"><li data-index="7">退还处理</li></a>
+                <a href="centerrepair"><li data-index="8">维修处理</li></a>
             </ul>
         </div>
         <div class="right">
                 <div class="rightbox1">
-                    <div class="h2">收货地址</div>
+                    <div class="h2">账户安全</div>
+                            <div class="h2_0 anquan1"> <img src="public/images/xhy/tou.gif" alt="" class="userimg1"><span class="h2_2">账号 : <span>x2447702033 </span><a href="javascript:;">退出</a></span>
+
+                        </div>
                         <div class="ul">
                             <div class="li">
-                                <p>收件人: <span>啊大大 (<span>18408271231</span>) </span></p>
-                                <p>收货地址: <span>中国-四川-成都市-双流县 阿达 610000</span></p>
+                                <p>账号密码</p>
+                                <p>用于账号信息与安全登录</p>
                             </div>
                             <div class="li liright">
                                 <button>修改</button>
-                                <button>删除</button>
                             </div>
                         </div>
-                    <div class="ul">
-                        <div class="li">
-                            <p>收件人: <span>啊大大 (<span>18408271231</span>) </span></p>
-                            <p>收货地址: <span>中国-四川-成都市-双流县 阿达 610000</span></p>
+                        <div class="ul">
+                            <div class="li">
+                                <p  >安全手机
+                                    <span>184****31</span>
+                                </p>
+                                <p>用于账号信息与安全登录</p>
+                            </div>
+                            <div class="li liright">
+                                <button>设置</button>
+                            </div>
                         </div>
-                        <div class="li liright">
-                            <button>修改</button>
-                            <button>删除</button>
-                        </div>
-                    </div>
-                    <div class="ul">
-                        <div class="li liright"><button>添加地址 </button></div>
-                    </div>
                 </div>
-
         </div>
     </div>
+<div class="footer">
+    <%-include ../../../view/footer.html%>
+</div>
 </body>
 <script>
 //         var a=document.querySelectorAll('a');
