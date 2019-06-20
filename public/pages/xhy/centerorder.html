@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="public/css/xhy/onlyone.css">
+</head>
+<style>
+</style>
+<body>
+
+<div class="nav">
+    <%-include ../../../view/nav.html%>
+</div>
+    <div id="box">
+        <div class="left">
+            <ul>
+                <li class="h2">账户管理</li>
+                <a href="centerbase"><li class="1" data-index="0">基本资料</li></a>
+                <a href="centeruser"><li data-index="1">账户安全</li></a>
+            </ul>
+            <ul>
+                <li class="h2">我的资产</li>
+                <a href="centercoupon"><li data-index="3">我的优惠券</li></a>
+                <a href="centercash"><li data-index="4">我的现金券</li></a>
+            </ul>
+            <ul>
+                <li class="h2">订单中心</li>
+                <a href="centerorder"><li data-index="5">我的订单</li></a>
+                <a href="centeraddress"><li data-index="6">收货地址</li></a>
+            </ul>
+            <ul class="nobottom">
+                <li class="h2">售后服务</li>
+                <a href="centerreturn"><li data-index="7">退还处理</li></a>
+                <a href="centerrepair"><li data-index="8">维修处理</li></a>
+            </ul>
+        </div>
+        <div class="right">
+                <div class="rightbox1">
+                    <div class="h2">我的订单</div>
+                        <div class="dingdanmianbaoxue">
+                            <span class="shoucolor">全部订单 (1)</span>
+                            <span >待付款(1)</span>
+                            <span >待收货(0)</span>
+                            <span >已完成(0)</span>
+                        </div>
+                    <div class=" dingdan">
+                        <div class="ul dingdan1">
+                            <span class="dingdanzhaungtai">待支付</span>
+                            <div class="ul xiahuaxian">
+                                <span class="li">
+                                <span>订单编号  : </span><span>24646251841131</span>&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; &nbsp;<span>2017-10-11 12:27:12</span>
+                                </span>
+                                <span class="liright">
+                                    <span>订单金额 : </span>
+                                    <span>1564元</span>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="shangpin1">
+                                <img src="public/images/xhy/tou.gif" alt="" class="shangpinimg">
+                                </span>
+                                    <span class="shangpin2">
+                                       极米无线游戏手柄
+                                    </span>
+                                    <span class="shangpin1">
+                                        x1
+                                    </span>
+                                    <span class="shangpin1">
+                                        56412元
+                                    </span>
+                                <div class="liright dingdananniu">
+                                    <button id="yespayment">去付款</button>
+                                    <button id="nopayment">取消订单</button>
+                                    <button id="Orderdetails">订单详情</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+        </div>
+    </div>
+<div class="footer">
+    <%-include ../../../view/footer.html%>
+</div>
+</body>
+<script>
+//         var a=document.querySelectorAll('a');
+//         var b=document.querySelector('.right')
+//         for (var i=0;i<a.length;i++){
+//             a[0].style.color='red'
+//             b.innerHTML=`
+//                       <div class="rightbox1">
+//                     <div class="h2">基本资料</div>
+//                     <div>昵称 : x2447702033</div>
+//                     <div class="h2_0">  <span class="h2_1">头像 : </span><img src="tou.gif" alt=""></div>
+//                     <button>修改头像</button>
+//                 </div>
+// `
+//             a[i].onclick=function () {
+//                 console.log(this.children[0].dataset.index)
+//
+//                 for(var i=0;i<a.length;i++){
+//                     a[i].style.color=''
+//                 }
+//                 b.innerHTML=''
+//                 console.log(i)
+//                 if(this.children[0].dataset.index==`0`){
+//                     b.innerHTML=`
+//                       <div class="rightbox1">
+//                     <div class="h2">基本资料</div>
+//                     <div>昵称 : x2447702033</div>
+//                     <div class="h2_0">  <span class="h2_1">头像 : </span><img src="tou.gif" alt=""></div>
+//                     <button>修改头像</button>
+//                 </div>
+// `
+//                 }
+//                 this.style.color='red'
+//             }
+//         }
+
+
+</script>
+</html>

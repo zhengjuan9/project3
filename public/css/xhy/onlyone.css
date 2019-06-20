@@ -28,6 +28,7 @@ button {
 }
 .left {
   width: 188px;
+  height: 820px;
   padding: 30px 20px 20px 20px  ;
   background: white;
   float: left;
