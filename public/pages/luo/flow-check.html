@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/flow-check.css">
+    <link rel="stylesheet" href="./../../css/shipping-add.css">
+    <title>确认订单</title>
+</head>
+<body>
+<form id="theForm">
+    <div class="container cart-con">
+        <div class="flow-buy">
+            <img src="https://file02.xgimi.com/official/shop/buy01_1.png">
+            <img src="https://file02.xgimi.com/official/shop/buy02_1.png">
+            <img src="https://file02.xgimi.com/official/shop/buy3.png">
+        </div>
+        <div class="flow-consignee" id="address_list">
+            <!-- 收货地址 -->
+            <h4>收货信息<a href="javascript:;" id="J-addNewAddressBtn" data-toggle="modal" data-target="#addAddress" onclick="addAddress()">添加地址</a></h4>
+            <div id="address_layout">
+                <p class="address-wrap normal " data-value=""><label><span>冷兔</span><span>四川成都成华区XX小区</span><span>18602855590</span></label><a class="del">删除</a></p>
+                <p class="address-wrap normal " data-value=""><label><span>河马</span><span>四川成都锦江区XX小区</span><span>18602855590</span></label><a class="del">删除</a></p>
+            </div>
+            <!--收货地址 -->
+
+        </div>
+        <div class="flow-inv">
+            <div class="flow-goods">
+                <h4>订单商品<a href="cart.html">返回购物车修改</a></h4>
+                <table>
+                    <tbody id="G_ORDERCHECKGOODS">
+                    <tr>
+                        <th>商品</th>
+                        <th></th>
+                        <th>单价</th>
+                        <th>数量</th>
+                        <th>小计</th>
+                    </tr>
+                            <tr class="goods_main goods" data-value="1184400469">
+                            <td width="15%"><a href="/goods/1184400469.html"><img src="https://file02.xgimi.com/official/admin/20181115/2018111510190633217.jpg" width="80" height="80"></a></td>
+                            <td style="text-align:left;" width="30%"><a href="/goods/1184400469.html">极米Z4V</a></td>
+                            <td width="20%">2099元</td>
+                            <td width="15%">1</td>
+                            <td width="20%">2099元</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note">
+                    订单备注：
+                    <input type="text" id="postscript" name="postscript" placeholder="可输入订单备注信息" class="note-input">
+                </p>
+            </div>
+            <div class="flow-total">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td style="color: #4a4a4a;">商品总件数：</td>
+                            <td style="color: #ec6c00;">1件</td>
+                        </tr>
+                        <tr>
+                            <td class="oderItem" style="color: #4a4a4a;">商品总金额：</td>
+                            <td id="total_price" style="color: #ec6c00;">2099元</td>
+                        </tr>
+                        <tr class="oderItem" id="freightPriceTr">
+                            <td style="color: #4a4a4a;">运费：</td>
+                            <td id="freightPrice" style="color: #ec6c00;">免运费</td>
+                        </tr>                                   
+                        <tr style="height: 5px;"></tr>
+                        <tr class="oderItem" id="reducePriceTr">
+                            <td style="color: #4a4a4a;">折扣优惠：</td>
+                            <td id="reducePrice" style="color: #ec6c00;">-100元</td>
+                        </tr>
+                        <tr class="oderItem">
+                            <td style="color: #4a4a4a;">应付总额：</td>
+                            <td style="color: #ec6c00;"><b id="totalPrice" style="font-size: 28px;color: #ec6c00;"> 1999</b>元</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="flow-go">
+                <input type="button" name="button" id="submitBtn" value="提交订单" class="sure">
+            </div>
+        </div>
+    </div>  
+</form>
+
+
+<!-- <div class="modal fade in" id="addAddress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" style="display: block;"><div class="modal-dialog dialog-u">
+        <form name="theForm" id="addressForm" onsubmit="return false;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">添加地址</h4>
+        </div>
+        <div class="modal-body">
+                <div class="addr-alert">
+                  <label>收件人</label>
+                  <input type="text" name="consignee" placeholder="请输入收件人姓名" id="xconsignee" value="">
+                </div>
+                <div class="addr-alert">
+                  <label>手机号码</label>
+                  <input type="text" name="telNumber" id="xtel" placeholder="请输入手机号码" value="">
+                </div>
+                <div class="search-citys">			
+                    <table>收货地址：</table>
+                   
+                    <span class="text" id="city_name" type="text" value="请输入城市中文或拼音">
+                        <span id="pop_cityValue">请选择所在城市</span>
+                       
+                        <div class="pop search-citys-pop" style="display:none;z-index:9999" id="cityarea">
+                            <a href="javascript:void(0)" class="pop-close"></a>
+                            <div class="search-citys-tt">
+                                <a href="javascript:void(0);" class="current" data-bind="pop_province_list"><span id="pop_province" data-id="">北京</span><i></i></a>
+                                <a href="javascript:void(0);" data-bind="pop_city_list"><span id="pop_city" data-pop-id="10000">请选择</span><i></i></a>
+                                <a href="javascript:void(0);" data-bind="pop_county_list"><span id="pop_county" data-pop-id="10000">请选择</span><i></i></a>
+                            </div>
+                            <div class="search-citys-list" id="pop_province_list">
+                                <ul class="s-citys1 click" id="s-citys1" style="display: block;">
+                                    <li onclick="pop_province(this)" data-id="0" data-value="北京">
+                                        <a href="javascript:void(0);">北京</a></li>
+                                    <li onclick="pop_province(this)" data-id="1" data-value="上海">
+                                        <a href="javascript:void(0);">上海</a></li>
+                                    <li onclick="pop_province(this)" data-id="2" data-value="天津">
+                                        <a href="javascript:void(0);">天津</a></li>
+                                    <li onclick="pop_province(this)" data-id="3" data-value="重庆">
+                                        <a href="javascript:void(0);">重庆</a></li>
+                                    <li onclick="pop_province(this)" data-id="4" data-value="河北">
+                                        <a href="javascript:void(0);">河北</a></li>
+                                    <li onclick="pop_province(this)" data-id="5" data-value="山西">
+                                        <a href="javascript:void(0);">山西</a></li>
+                                    <li onclick="pop_province(this)" data-id="6" data-value="河南">
+                                        <a href="javascript:void(0);">河南</a></li>
+                                    <li onclick="pop_province(this)" data-id="7" data-value="辽宁">
+                                        <a href="javascript:void(0);">辽宁</a></li>
+                                    <li onclick="pop_province(this)" data-id="8" data-value="吉林">
+                                        <a href="javascript:void(0);">吉林</a></li>
+                                    <li onclick="pop_province(this)" data-id="9" data-value="黑龙江">
+                                        <a href="javascript:void(0);">黑龙江</a></li>
+                                    <li onclick="pop_province(this)" data-id="10" data-value="内蒙古">
+                                        <a href="javascript:void(0);">内蒙古</a></li>
+                                    <li onclick="pop_province(this)" data-id="11" data-value="江苏">
+                                        <a href="javascript:void(0);">江苏</a></li>
+                                    <li onclick="pop_province(this)" data-id="12" data-value="山东">
+                                        <a href="javascript:void(0);">山东</a></li>
+                                    <li onclick="pop_province(this)" data-id="13" data-value="安徽">
+                                        <a href="javascript:void(0);">安徽</a></li>
+                                    <li onclick="pop_province(this)" data-id="14" data-value="浙江">
+                                        <a href="javascript:void(0);">浙江</a></li>
+                                    <li onclick="pop_province(this)" data-id="15" data-value="福建">
+                                        <a href="javascript:void(0);">福建</a></li>
+                                    <li onclick="pop_province(this)" data-id="16" data-value="湖北">
+                                        <a href="javascript:void(0);">湖北</a></li>
+                                    <li onclick="pop_province(this)" data-id="17" data-value="湖南">
+                                        <a href="javascript:void(0);">湖南</a></li>
+                                    <li onclick="pop_province(this)" data-id="18" data-value="广东">
+                                        <a href="javascript:void(0);">广东</a></li>
+                                    <li onclick="pop_province(this)" data-id="19" data-value="广西">
+                                        <a href="javascript:void(0);">广西</a></li>
+                                    <li onclick="pop_province(this)" data-id="20" data-value="江西">
+                                        <a href="javascript:void(0);">江西</a></li>
+                                    <li onclick="pop_province(this)" data-id="21" data-value="四川">
+                                        <a href="javascript:void(0);">四川</a></li>
+                                    <li onclick="pop_province(this)" data-id="22" data-value="海南省">
+                                        <a href="javascript:void(0);">海南省</a></li>
+                                    <li onclick="pop_province(this)" data-id="23" data-value="贵州">
+                                        <a href="javascript:void(0);">贵州</a></li>
+                                    <li onclick="pop_province(this)" data-id="24" data-value="云南">
+                                        <a href="javascript:void(0);">云南</a></li>
+                                    <li onclick="pop_province(this)" data-id="25" data-value="西藏">
+                                        <a href="javascript:void(0);">西藏</a></li>
+                                    <li onclick="pop_province(this)" data-id="26" data-value="陕西">
+                                        <a href="javascript:void(0);">陕西</a></li>
+                                    <li onclick="pop_province(this)" data-id="27" data-value="甘肃">
+                                        <a href="javascript:void(0);">甘肃</a></li>
+                                    <li onclick="pop_province(this)" data-id="28" data-value="青海">
+                                        <a href="javascript:void(0);">青海</a></li>
+                                    <li onclick="pop_province(this)" data-id="29" data-value="宁夏">
+                                        <a href="javascript:void(0);">宁夏</a></li>
+                                    <li onclick="pop_province(this)" data-id="30" data-value="新疆">
+                                        <a href="javascript:void(0);">新疆</a></li>
+                                    <li onclick="pop_province(this)" data-id="31" data-value="香港">
+                                        <a href="javascript:void(0);">香港</a></li>
+                                    <li onclick="pop_province(this)" data-id="32" data-value="澳门">
+                                        <a href="javascript:void(0);">澳门</a></li>
+                                    <li onclick="pop_province(this)" data-id="33" data-value="台湾">
+                                        <a href="javascript:void(0);">台湾</a></li>
+                                    <li onclick="pop_province(this)" data-id="34" data-value="钓鱼岛">
+                                        <a href="javascript:void(0);">钓鱼岛</a></li>
+                                </ul>
+                            </div>
+                            <div class="search-citys-list" id="pop_city_list"></div>
+                            <div class="search-citys-list" id="pop_county_list"></div>
+                        </div>
+                    </span>	
+                </div>
+
+            <div class="addr-alert">
+                <label>地址</label>
+                  
+                  <input type="text" id="xaddress" placeholder="请输入详细地址" name="address" value="" style="width:300px;">
+            </div>
+                <div class="addr-alert">
+                  <label>邮政编码</label>
+                  <input type="text" name="zipCode" id="xzipcode" value="" placeholder="请输入邮政编码">
+                </div>
+                <div class="addr-alert">
+                    <label>
+                    </label>
+                    <label style="width: auto; text-align: left;">
+                    <input type="checkbox" value="0" id="acquiescence" name="acquiescence" style="margin-right:5px;" onclick="$(this).val($(this).val() == 1 ? 0 : 1);">设为默认收货地址
+                    </label>
+                </div>
+        </div>
+        <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" class="btn btn-primary">保存</button>
+        </div>
+      </div>
+        </form>
+    </div>
+  
+
+</div> -->
+
+    <!-- <script>
+            $("#addressForm").on('submit', function() {
+                checkNewForm(addressCallback);
+            })
+    </script> -->
+
+
+
+<script src="./../../js/jquery-3.4.0.js"></script>
+<script src="./../../js/Shipping-add.js"></script>
+<script language="javascript">
+//     $(document).ready(function(){
+	
+//     $('.text').click(function(){
+//         $('.search-citys-pop').show();
+//     });
+    
+//     //绑定tab选项卡click事件
+//     $('.search-citys-pop .search-citys-tt a').click(function(){
+//         $('.search-citys-pop .search-citys-tt a').removeClass('current');
+//         $(this).addClass('current');
+//         $('.search-citys-pop .search-citys-list').hide();
+//         $('#'+$(this).attr('data-bind')).show();
+//     });
+// });
+</script>
+</body>
+</html>

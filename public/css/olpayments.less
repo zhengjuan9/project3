@@ -1,0 +1,76 @@
+.content {
+    width: 1140px;
+    background-color: #FFF;
+    padding: 50px;
+    margin: 30px auto 60px
+}
+.section-order{
+    margin-bottom: 30px
+}
+.section-payment{
+    width: 100%;
+    min-height: 200px;
+}
+.tab-content{
+    min-height: 100px
+}
+
+.payment, .upop-box, .isinstalment-box{ display: block; width: 100%; height: 120px; }
+.payment {width: 100%; height: 70px; }
+
+.upop-box { height: 182px;}
+.upop-box .item{ display: inline-block; width: 142px;  border: 1px solid #e0e0e0; cursor: pointer; margin: 8px 6px 0 0; padding: 1px }
+.upop-box .item.selected{ border-color: #ff6700; }
+.upop-box .item input{display: none;}
+.upop-box .item img{ width: 138px; }
+
+.h_box {
+    display: box;
+    display: -webkit-box;
+    width: 100%;
+}
+.flex_1 {
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    width: 100%;
+}
+
+.h_box img{ padding: 30px 60px; float: left }
+.flow-pay-success h3 {color: #05adea;vertical-align: middle}
+.flow-pay-success h3 span {vertical-align: middle}
+.flow-pay-success h4 {color: #333;font-size: 13px;margin-top: 5px; font-weight: normal}
+
+.isinstalment-box{ min-height: 120px; font-size: 14px; }
+.isinstalment-box .isinstalment{float: left; width: 260px; text-align: center; }
+.isinstalment-box .item { display: inline-block; width: 336px;  border: 1px solid #e0e0e0; cursor: pointer; margin: 10px 5px 0; padding: 5px;   }
+.isinstalment-box .item.selected{ border-color: #ff6700; }
+.isinstalment-box .item a { color: #666; text-align: center; }
+.isinstalment-box .item a h3 {    margin-bottom: 5px;font-weight: normal; font-size: 18px; color: #ff6700;}
+.isinstalment-box .item input{display: none;}
+.isinstalment-box .tip{ font-size: 12px; color: #666; padding: 10px 6px; line-height: 1.6; float: left;}
+
+form #pay-submit{ display: none; }
+
+
+.popupBox{position: fixed; top: 0; z-index: 99; width: 100%; height: 100%; text-align: center; background: rgba(000,000,000, 0.5); font-size: 14px; line-height: 24px; display: none}
+.popupBox .header{ font-size: 20px; padding: 14px 30px; background: #f5f5f5; text-align: left; line-height: 2; }
+.popupBox .header span.close{background: url(https://file02.xgimi.com/official/common/images/close.png) no-repeat; width: 36px; height: 36px; opacity: 1;  }
+.popupBox .header span.close:hover{ background-position: 0 -36px; }
+.popupBox .body{margin-top: 10%; background-color: #FFF; display: inline-block; }
+.popupBox .contents{padding: 20px 50px}
+.popupBox .contents img{ width: 300px; height: 300px; margin: 10px;  }
+
+/* .payBox {display: block} */
+.afresh, .complete{ width: 120px; height: 40px; line-height: 40px; display: inline-block; margin: 20px 10px 40px; /* float: left; */ background: #ff8b3e; color: #FFF; font-size: 18px }
+.afresh:hover, .complete:hover {color: #FFF; }
+.complete{ background: #40b7f9; }
+
+.payment .item { margin-right: 10px; width: 146px; border: 1px solid #e0e0e0; cursor: pointer; margin: 10px 10px 0 0; padding: 5px 10px}
+.payment .item.selected{ border-color: #ff6700; }
+.payment .item input{display: none;}
+.payment .item img{ width: 120px; }
+
+.pay-footer { min-height: 50px; }
+.pay-footer .submit{float: right; background: #EC6C00; color: #fff; border: 1px solid #EC6C00; cursor: pointer;  width: 160px;height: 45px; line-height: 45px;text-align: center;  font-size: 16px; }
+
+.section span {color: #ff6700;}

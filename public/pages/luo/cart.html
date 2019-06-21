@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/cart.css">
+
+    <title>购物车</title>
+</head>
+<body>
+    <div id="cart-contents">
+        <div class="container cart-con" id="cart_g">
+            <div class="flow-buy">
+                <img src="https://file02.xgimi.com/official/shop/buy01_1.png">
+                <img src="https://file02.xgimi.com/official/shop/buy2.png">
+                <img src="https://file02.xgimi.com/official/shop/buy3.png">
+            </div>
+            <div class="list-head clearfix">
+                <div class="col col-check">
+                <i id="allcheck" class="iconfont checkbox  selected " onclick="allcheck(this)"></i> 全选</div>
+                <div class="col col-img"></div>
+                <div class="col col-name">商品名称</div>
+                <div class="col col-price">单价</div>
+                <div class="col col-num">购买数量</div>
+                <div class="col col-total">小计</div>
+                <div class="col col-action">操作</div>
+            </div>
+
+            <div class="list-body" id="place_order_area">
+                <form>
+                    
+                    <div class="item-box goods_tr_64602  goods_tr    selected " id="goods_tr_64602 " shoppingcartid="64602">
+                        <!-- 套餐 -->
+                        <!-- 普通商品 -->
+                        <div class="item-table">
+                            <div class="item-row clearfix">
+                                <div class="col col-check">
+                                    <i class="iconfont checkbox" onclick="partcheck(this)"></i>
+                                </div>
+                                <div class="col col-img">
+                                    <a href="/goods/1184400469.html" title=""><img src=" https://file02.xgimi.com/official/admin/20181115/2018111510190633217.jpg " alt="" width="80" height="80"></a>
+                                </div>
+                                <div class="col col-name">
+                                    <p><a style="color: #333" href="/goods/1184400469.html" target="_blank"> 极米Z4V </a></p>
+                                </div>
+                                <div class="col col-price">
+                                    <p> 2099元</p>
+                                </div>
+                                <div class="col col-num">
+                                    <!--普通商品可修改数量 -->
+                                    <p class="change-num clearfix">
+                                        <a onclick="reduce_goods_num(this)" class="reduce"></a>
+                                        <input type="text" class="proNums" onchange="change_goods_num(this)" name="goods_number" id="goods_number_" shoppingcartid=" 64602 " origin_number=" 1 " value=" 1 " inventory="20">
+                                        <a class="add" onclick="add_goods_num(this)"></a>
+                                    </p>
+                                </div>
+                                <div class="col col-total">
+                                    <p> 2099元</p>
+                                </div>
+                                <div class="col col-action">
+                                <p><a style="color: #333" href="javascript:void(0);" onclick="drop_goods( '64602' , '0' );">删除</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="raise-buy-box" id="raise-buylists"></div>
+
+            <div class="raise-buy-box" id="reduceActivity" style="text-align: right;">
+                <span>可折扣方式：</span>
+                <select id="reduceList" style="width: 320px; height: 40px; display: inline-block; margin-top: 20px;border: 1px solid #e1e1e1;" onchange="selectReduce(this)">
+                        <option value="657"> 满2000元减100元优惠</option>
+                </select>
+            </div>
+
+            <div class="span5 flow-next flow-next-to " id="activity_div">
+                <div style="text-align: right;margin-bottom: 20px;"></div>
+                <p style="text-align: left; width: 40%;">
+                    <input type="button" class="flow-btn gobuy" value="继续购物" onclick="window.location.href='shop.html'">
+                </p>
+                <p style="width: 60%;">优惠金额：
+                    <span style="color: #ec6c00;font-size: 16px;padding-right: 10px;">
+                        <small style="margin-left: 5px;" id="reducePrice">-100元</small>
+                    </span>
+                    总计（不含运费）：
+                    <font class="price" id="goods_total"> 1999元</font>
+                    <input type="button" class="flow-btn" onclick="window.location='flow-check.html'" value="去结算">
+                 </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

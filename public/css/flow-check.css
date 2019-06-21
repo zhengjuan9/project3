@@ -1,0 +1,380 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+body{
+    margin: 0 auto;
+    min-width: 1140px;
+    background: #EFEFEF;
+
+}
+.container{
+    width: 1080px;
+    margin: 0 auto;
+}
+.cart-con {
+    background: #fff;
+    margin: 50px auto;
+    padding: 20px 30px;
+  }
+.flow-buy {
+  margin: 40px auto 40px auto;
+  text-align: center;
+}
+
+.flow-consignee {
+  margin-bottom: 40px;
+}
+.flow-consignee h4 {
+  font-weight: 500;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.flow-consignee h4 a {
+  float: right;
+  font-size: 13px;
+  color: #EC6C00;
+}
+.flow-consignee p {
+  position: relative;
+  line-height: 45px;
+  height: 45px;
+  overflow: hidden;
+  border: 2px solid #EFEFEF;
+  background: #fff;
+  margin: 0 30px 20px 30px;
+}
+.flow-consignee p.active {
+  border: 2px solid #EC6C00;
+  background: #f4f4f4;
+}
+.flow-consignee p input[type='radio'] {
+  position: absolute;
+  top: 5px;
+  left: -20px;
+  z-index: 2;
+}
+.flow-consignee p label {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 0 20px;
+}
+.flow-consignee p span {
+  margin-right: 20px;
+  font-size: 14px;
+}
+.flow-consignee p a.del {
+  position: absolute;
+  top: 0px;
+  right: 20px;
+  z-index: 19;
+  font-size: 12px;
+  cursor: pointer;
+  color: #777;
+}
+.flow-consignee p a.del:link {
+  color: #777;
+}
+.flow-consignee p a.del:hover {
+  color: #333;
+}
+.flow-inv {
+  margin-bottom: 40px;
+}
+.flow-inv-con {
+  margin: 0 30px;
+}
+.flow-inv-details {
+  margin: 20px 30px;
+}
+.flow-inv h4 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.flow-inv span {
+  display: inline-block;
+  width: 85px;
+  text-align: right;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.inv-con {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  height: 35px;
+  line-height: 35px;
+  vertical-align: middle;
+}
+.inv-con input[type='radio'] {
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: 1;
+}
+.inv-con label {
+  display: inline-block;
+  float: left;
+  border: 2px solid #ccc;
+  width: 100px;
+  text-align: center;
+  margin-right: 20px;
+  height: 35px;
+  line-height: 35px;
+  font-weight: normal;
+  cursor: pointer;
+}
+.inv-con label.active {
+  border: 2px solid #EC6C00;
+}
+.flow-inv input.inv-input {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 5px;
+  border: 1px solid #ccc;
+  width: 240px;
+  margin-left: 4px;
+}
+.fapiao-tishi {
+  margin-left: 60px;
+  margin-top: 20px;
+  color: #666;
+}
+.flow-goods {
+  margin-bottom: 40px;
+}
+.flow-goods h4 a {
+  float: right;
+  font-weight: 500;
+  font-size: 13px;
+  color: #EC6C00;
+}
+.flow-goods h4 {
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.flow-goods table {
+  width: 100%;
+}
+.flow-goods table th {
+  text-align: center;
+  font-weight: normal;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.flow-goods table td {
+  text-align: center;
+  position: relative;
+}
+.flow-goods table td span.free {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 20px;
+  background: #EC6C00;
+  color: #fff;
+  position: absolute;
+  top: 4px;
+  left: 10px;
+  font-size: 12px;
+}
+.flow-goods p.note {
+  margin-top: 30px;
+  padding: 0 30px;
+}
+.flow-goods input.note-input {
+  width: 93%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+}
+.flow-count {
+  border-top: 1px solid #ddd;
+  padding: 20px 0;
+}
+.flow-total {
+  width: 35%;
+  padding-right: 30px;
+}
+.flow-total table {
+  width: 100%;
+}
+.flow-total table td {
+  text-align: right;
+  width: 50%;
+  line-height: 33px;
+}
+.flow-total table td:nth-child(even) {
+  padding-right: 30px;
+}
+.flow-coupon {
+  float: left;
+  width: 54%;
+  padding: 0 0 0 30px;
+}
+.flow-coupon li {
+  float: none;
+  padding-bottom: 15px;
+}
+.flow-coupon li a.coupon-list {
+  cursor: pointer;
+  color: #333;
+}
+.flow-coupon li span.slide {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  line-height: 14px;
+  background: #EC6C00;
+  color: #fff;
+  font-size: 16px;
+  margin-right: 7px;
+}
+.flow-coupon-con {
+  border: 1px solid #ddd;
+  width: 90%;
+  box-sizing: border-box;
+  margin-left: 22px;
+  display: none;
+  box-shadow: 3px 6px 10px 3px #cecbcb2e;
+}
+.flow-coupon-con p {
+  text-align: center;
+}
+.flow-coupon-con p:last-child {
+  text-align: right;
+  margin: 20px 5%;
+  width: 90%;
+}
+.flow-coupon-con p.first {
+  margin-top: 20px;
+}
+.flow-coupon-con p.font {
+  padding: 0 5%;
+  text-align: left;
+  color: #444;
+  font-size: 12px;
+}
+.flow-coupon-con a.tab {
+  border-right: 1px solid #bbb;
+  width: 32%;
+  text-align: center;
+  display: inline-block;
+  height: 15px;
+  line-height: 15px;
+  margin: 15px 0;
+  color: #444;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.flow-coupon-con a.tab:last-child {
+  border-right: none;
+}
+.flow-coupon-con a.tab.active {
+  color: #EC6C00;
+}
+.flow-coupon-con select {
+  width: 90%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+.flow-coupon-con input.cou-input {
+  width: 90%;
+  height: 40px;
+  line-height: 40px;
+  border: 1px solid #ccc;
+  padding: 0 5px;
+}
+.flow-coupon-con input.cou-sure {
+  background: #EC6C00;
+  text-align: center;
+  width: 160px;
+  height: 45px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #EC6C00;
+}
+.flow-coupon-con input.cou-cancel {
+  background: #aaa;
+  text-align: center;
+  width: 160px;
+  height: 45px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #aaa;
+  margin-right: 10px;
+}
+.flow-coupon .flow-reduce {
+  margin-bottom: 40px;
+  width: 93%;
+}
+.flow-coupon .flow-reduce .slide {
+  color: #fff;
+  padding: 0 3px;
+  background-color: #ec6b00;
+  margin-right: 5px;
+}
+.flow-coupon .flow-reduce .fullcut {
+  width: 400px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: 1px solid #ddd;
+  padding-left: 5px;
+}
+.flow-go {
+  padding: 30px 60px 20px 20px;
+  text-align: right;
+  border-top: 1px solid #ddd;
+  margin-top: 30px;
+}
+.flow-go input.sure {
+  background: #EC6C00;
+  text-align: center;
+  width: 160px;
+  height: 45px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #EC6C00;
+}
+.flow-go input.sure:hover {
+    cursor: pointer;
+}
+.flow-go input.disable {
+  background: #b9b9b9;
+  text-align: center;
+  width: 160px;
+  height: 45px;
+  font-size: 16px;
+  color: #fff;
+  border: 1px solid #ddd;
+}
+.flow-go span {
+  margin: 0 20px;
+}
+.flow-go font {
+  color: #EC6C00;
+  margin: 0 4px;
+}
+.flow-go b {
+  font-size: 20px;
+  color: #EC6C00;
+  font-weight: normal;
+}

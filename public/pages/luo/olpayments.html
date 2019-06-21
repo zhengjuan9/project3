@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./../../css/olpayments.css">
+    <title>在线支付</title>
+</head>
+<body>
+    <div class="content">
+        <div class="section section-order">
+            <div class="p h_box">
+                <div><img src="https://file02.xgimi.com/official/common/images/pay_success.png"></div>
+                <div class="flex_1">
+                    <div class="flow-pay-success" data-time="2019-06-22 15:30:12">
+                        <h3>订单提交成功</h3>
+                        <h4>请在 <span id="pay_time">23小时48分</span> 内完成支付，超时订单将关闭。</h4>
+                    </div>
+                    <div>
+                        支付金额：4798元  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;订单编号: 201906210511000055811816
+                    </div>
+                    <div class="p h_box">
+                        <div>收货信息：</div>
+                        <div class="flex_1">sss  18602855590 22222 222222 </div>
+                    </div>
+                    <div class="p h_box">
+                        <div>商品列表：</div>
+                        <div class="flex_1">
+                            极米Z6X  2799元  * 1<br>
+                            极米Z4V  2099元  * 1<br>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="solid"></div>
+        <div class="section section-payment">
+            <form" method="get" accept-charset="utf-8" target="_blank">
+                <ul id="myTab" class="nav nav-tabs">
+                    <li class="active"><a href="#nominate" data-toggle="tab">支付方式</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane fade in nominate active" id="nominate">
+                        <!-- 推荐支付方式 -->
+                        <div class="payment">
+                            <ul>
+                                <li class="item selected" href="javascript:void(0)" pay-code="Alipay">
+                                    <img src="https://file02.xgimi.com/official/common/images/payment/Alipay.png" alt="支付宝">
+                                    <input type="radio" name="payment" value="Alipay">
+                                </li>
+                                <li class="item" href="javascript:void(0)" pay-code="Wxpay">
+                                    <img src="https://file02.xgimi.com/official/common/images/payment/Wxpay.png" alt="微信支付">
+                                    <input type="radio" name="payment" value="Wxpay">
+                                </li>
+                            </ul> 
+                        </div>
+                    </div>    
+                <div class="pay-footer">
+                    <!-- <input id="pay-submit" type="submit" name="" value="支付"> -->
+                    <div class="submit">提交支付</div>
+                </div>
+            </form">
+        </div>
+    
+    </div>
+</body>
+</html>

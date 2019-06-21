@@ -1,0 +1,119 @@
+
+
+h3{font-size: 24px; font-weight: 500;}
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  color: #333;
+}
+body{
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    color: #333;
+  margin: 0 auto;
+  min-width: 1140px;
+  background: #EFEFEF;
+}
+
+.content {
+  width: 1080px;
+  background-color: #FFF;
+  padding: 50px;
+  margin: 30px auto 60px;
+}
+.solid{
+  width: 100%;
+  margin: 30px 0;
+  border-bottom: 1px solid rgb(189, 189, 189);
+}
+.section-order {
+  margin-bottom: 30px;
+}
+.flow-pay-success h3{
+  color: #05adea;
+  margin: 20px 0 10px 0;
+  vertical-align: middle;
+}
+.flow-pay-success h4{
+  color: #333;
+  font-weight: 500;
+  font-size: 13px;
+  margin: 20px 0 10px 0;
+  vertical-align: middle;
+}
+.section-payment {
+  width: 100%;
+  min-height: 200px;
+}
+.tab-content {
+  min-height: 100px;
+}
+.payment,
+.upop-box,
+.isinstalment-box {
+  display: block;
+  width: 100%;
+  height: 120px;
+}
+.payment {
+  width: 100%;
+  height: 70px;
+}
+
+.h_box {
+  display: box;
+  display: -webkit-box;
+  width: 100%;
+}
+.flex_1 {
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  width: 100%;
+}
+.h_box img {
+  padding: 30px 60px;
+  float: left;
+}
+
+
+
+form #pay-submit {
+  display: none;
+}
+.payment .item {
+  margin-right: 10px;
+  width: 146px;
+  border: 1px solid #e0e0e0;
+  cursor: pointer;
+  margin: 10px 10px 0 0;
+  padding: 5px 10px;
+}
+.payment .item.selected {
+  border-color: #ff6700;
+}
+.payment .item input {
+  display: none;
+}
+.payment .item img {
+  width: 120px;
+}
+.pay-footer {
+  min-height: 50px;
+}
+.pay-footer .submit {
+  float: right;
+  background: #EC6C00;
+  color: #fff;
+  border: 1px solid #EC6C00;
+  cursor: pointer;
+  width: 160px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 16px;
+}
+.section span {
+  color: #ff6700;
+}
