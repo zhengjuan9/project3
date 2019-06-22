@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>便携娱乐</title>
-    <link rel="stylesheet" href="../../css/cl-TV.css">
+    <link rel="stylesheet" href="public/css/cl-TV.css">
 </head>
 <body>
+<div id="3d-nav">
+    <!-- 导航栏 -->
+    <%-include ../../../view/nav.html%>
+</div>
+<div style="clear:both"></div>
     <div id="sp">
         <div id="spdh">
             <ul>
@@ -23,58 +28,52 @@
         <div id="fl">
             <ul>
                 <li>分类：</li>
-                <li><a href="whole.html">全部</a></li>
-                <li><a href="home.html">家用娱乐</a></li>
-                <li><a href="Portable.html" class="cheng">便携娱乐</a></li>
-                <li><a href="TV.html">激光电视</a></li>
+                <li><a href="whole">全部</a></li>
+                <li><a href="home">家用娱乐</a></li>
+                <li><a href="Portable" class="cheng">便携娱乐</a></li>
+                <li><a href="TV">激光电视</a></li>
             </ul>
         </div>
-        <div id="spzs">
-          <ul>
-              <li class="spzs">
-                  <a href="">
-                      <p class="tp">图片</p>
-                      <p>商品名</p>
-                      <p><b>价格<font>元</font></b></p>
-                  </a>
-              </li>
-              <li class="spzs">
-                  <a href="">
-                      <p class="tp">图片</p>
-                      <p>商品名</p>
-                      <p><b>价格<font>元</font></b></p>
-                  </a>
-              </li>
-              <li class="spzs">
-                  <a href="">
-                      <p class="tp">图片</p>
-                      <p>商品名</p>
-                      <p><b>价格<font>元</font></b></p>
-                  </a>
-              </li>
-              <li class="spzs">
-                  <a href="">
-                      <p class="tp">图片</p>
-                      <p>商品名</p>
-                      <p><b>价格<font>元</font></b></p>
-                  </a>
-              </li>
-              <li class="spzs">
-                  <a href="">
-                      <p class="tp">图片</p>
-                      <p>商品名</p>
-                      <p><b>价格<font>元</font></b></p>
-                  </a>
-              </li>
-              <li class="spzs">
-                  <a href="">
-                      <p class="tp">图片</p>
-                      <p>商品名</p>
-                      <p><b>价格<font>元</font></b></p>
-                  </a>
-              </li>
+        <div id="spzs2">
+          <ul id="oul">
+             
           </ul>
         </div>
     </div>
+<div style="clear:both"></div>
+<div>
+    <%-include ../../../view/footer.html%>
+</div>
 </body>
+<script src="public/pages/cl/ajax.js"></script>
+<script src="public/pages/cl/jquery.min.js"></script>
+<script src="public/pages/cl/Cookie.js"></script>
+<script>
+    var oUl=document.getElementsByName('ul')[0];
+    ajax({
+        url:'/PortableJson',
+        success:function (res) {
+            var json=JSON.parse(res);
+
+            if (json.error) {
+                console.log("数据错误");
+            }else {
+                console.log(json.data);
+                for (i=0;i<json.data.length;i++){
+                    $('#oul').append($(`<li class="spzs" data-id="${json.data[i].g_ID}">
+                  <a href="">
+                      <p class="tp"><img src="${json.data[i].p_minURL1}" alt=""></p>
+                      <p>${json.data[i].g_name}</p>
+                      <p><b>￥${json.data[i].g_price}<font>元</font></b></p>
+                  </a>
+              </li>`))
+                }
+            }
+        }
+    })
+    $('#oul').on('click','.spzs',function () {
+        setCookie('id',$(this).data('id'),1)
+    })
+
+</script>
 </html>

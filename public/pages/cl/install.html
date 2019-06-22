@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>安装服务</title>
-    <link rel="stylesheet" href="../../css/cl-TV.css">
+    <link rel="stylesheet" href="public/css/cl-TV.css">
 </head>
 <body>
+<div id="3d-nav">
+    <!-- 导航栏 -->
+    <%-include ../../../view/nav.html%>
+</div>
+<div style="clear:both"></div>
     <div id="sp">
         <div id="spdh">
             <ul>
@@ -23,10 +28,10 @@
         <div id="fl">
             <ul>
                 <li>分类：</li>
-                <li><a href="whole.html">全部</a></li>
-                <li><a href="home.html">家用娱乐</a></li>
-                <li><a href="Portable.html">便携娱乐</a></li>
-                <li><a href="TV.html">激光电视</a></li>
+                <li><a href="whole">全部</a></li>
+                <li><a href="home">家用娱乐</a></li>
+                <li><a href="Portable">便携娱乐</a></li>
+                <li><a href="TV">激光电视</a></li>
             </ul>
         </div>
         <div id="spzs">
@@ -76,5 +81,9 @@
           </ul>
         </div>
     </div>
+<div style="clear:both"></div>
+<div>
+    <%-include ../../../view/footer.html%>
+</div>
 </body>
 </html>

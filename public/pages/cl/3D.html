@@ -3,34 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>3D效果</title>
-    <link rel="stylesheet" href="../../css/3D.css">
+    <link rel="stylesheet" href="public/css/3D.css">
 </head>
 <body>
+<div id="3d-nav">
+    <!-- 导航栏 -->
+    <%-include ../../../view/nav.html%>
+</div>
+<div style="clear:both"></div>
 <div id="nr">
     <div id="bt">
         <h4 style="margin-top: 20px">服务支持</h4>
-        <p><a href="Policy.html">关于支付</a></p>
-        <p><a href="Frame.html">关于画面</a></p>
-        <p><a href="3D.html"  class="cheng">3D效果</a></p>
-        <p><a href="equipment.html">关于设备</a></p>
-        <p><a href="invoice.html">电子发票</a></p>
+        <p class="cl"><a href="payment">关于支付</a></p>
+        <p class="cl"><a href="Frame">关于画面</a></p>
+        <p class="cl"><a href="3D"  class="cheng">3D效果</a></p>
+        <p class="cl"><a href="equipment">关于设备</a></p>
+        <p class="cl"><a href="invoice">电子发票</a></p>
     </div>
     <div id="wz">
         <h4 class="cheng">3D效果</h4>
-        <p class="p1">Q：如何使用极米无屏电视观看3D影片？</p>
-        <p class="p2">
-            1、确定3D片源是否为上下或左右格式；<br>
+        <p class="cl">Q：如何使用极米无屏电视观看3D影片？</p>
+        <p class="cl">
+            <span style="margin-left:29px;">1、确定3D片源是否为上下或左右格式；</span><br>
             <span style="margin-left:29px;">2、根据片源格式在“设置”中将画面调整为肉眼观看为重影，此时戴上3D眼镜观影；</span><br>
             <span style="margin-left:29px;">3、调整3D眼镜中间的按钮直至产生最佳3D效果；</span><br>
             <span style="margin-left:29px;">4、温馨提示：3D眼镜建议一个月充一次电，以延长3D眼镜使用寿命。</span><br>
         </p>
     </div>
     <div id="t">
-        <div><a href="Policy.html"><img src="../../images/cl/21_01.png" height="82" width="152"/></a><span></span></div>
-        <div><a href="Policy.html"><img src="../../images/cl/21_03.png" height="82" width="152"/></a><span></span></div>
-        <div><a href="Policy.html"><img src="../../images/cl/21_05.png" height="82" width="152"/></a><span></span></div>
-        <div><a href="Policy.html"><img src="../../images/cl/21_07.png" height="82" width="152"/></a></div>
+        <div><a href="Policy"><img src="public/images/cl/21_01.png" height="82" width="152"/></a><span></span></div>
+        <div><a href="Policy"><img src="public/images/cl/21_03.png" height="82" width="152"/></a><span></span></div>
+        <div><a href="Policy"><img src="public/images/cl/21_05.png" height="82" width="152"/></a><span></span></div>
+        <div><a href="Policy"><img src="public/images/cl/21_07.png" height="82" width="152"/></a></div>
     </div>
+</div>
+<div style="clear:both"></div>
+<div>
+    <%-include ../../../view/footer.html%>
 </div>
 </body>
 </html>

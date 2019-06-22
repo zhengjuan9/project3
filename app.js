@@ -5,12 +5,25 @@ var morgan=require('morgan');
 var bodyPaser=require('body-parser');
 // var ejsRouter=require('./router/ejsRouter.js');
 var ejs=require('ejs');
+var mysql=require('mysql');
+var cookie=require('cookie-parser');
+
+var db= mysql.createConnection({
+    host     : 'localhost',
+    user     : 'root',
+    password : 'root',
+    database : 'zeffira'
+});
 
 // console.log(path.resolve(__dirname,'./public'));
 
 //使用配置
 //搭建服务器
 var app=express();
+
+//使用cookie
+app.use(cookie());
+
 //配置静态文件
 app.use(express.static(__dirname));
 //配置图标
@@ -143,6 +156,56 @@ app.get('/cansu', function (req, res) {
 app.get('/4kto', function (req, res) {
     res.render('./public/pages/zp/LUNE4KTo')
 });
+
+
+
+//陈林的端口
+app.get('/TVJson',function (req,res) {
+
+    var sql=`SELECT g_ID,g_name,g_price , a.c_name ,  b.p_minURL1  FROM g_class  a JOIN g_picture b JOIN goods c ON a.c_ID = c.g_classID AND b.p_g_ID = c.g_ID WHERE a.c_name='激光电视' GROUP BY b.p_minURL1`;
+    db.query(sql,function (err,data) {
+        if (err){
+            console.log("数据错误"+err);
+        } else {
+            res.send({error:0,data:data})
+        }
+    })
+});
+app.get('/wholeJson',function (req,res) {
+
+    var sql=`SELECT a.g_ID, a.g_name, a.g_price ,c.p_minURL1 FROM goods a JOIN g_class b JOIN g_picture c ON b.c_ID = a.g_classID  AND a.g_ID = c.p_g_ID GROUP BY a.g_name `;
+    db.query(sql,function (err,data) {
+        if (err){
+            console.log("数据错误"+err);
+        } else {
+            res.send({error:0,data:data})
+        }
+    })
+});
+app.get('/PortableJson',function (req,res) {
+
+    var sql=`SELECT g_ID,g_name,g_price , a.c_name ,  b.p_minURL1  FROM g_class  a JOIN g_picture b JOIN goods c ON a.c_ID = c.g_classID AND b.p_g_ID = c.g_ID WHERE a.c_name='便携娱乐' GROUP BY b.p_minURL1`;
+    db.query(sql,function (err,data) {
+        if (err){
+            console.log("数据错误"+err);
+        } else {
+            res.send({error:0,data:data})
+        }
+    })
+});
+app.get('/homeJson',function (req,res) {
+
+    var sql=`SELECT g_ID,g_name,g_price , a.c_name ,  b.p_minURL1  FROM g_class  a JOIN g_picture b JOIN goods c ON a.c_ID = c.g_classID AND b.p_g_ID = c.g_ID WHERE a.c_name='家用娱乐' GROUP BY b.p_minURL1`;
+    db.query(sql,function (err,data) {
+        if (err){
+            console.log("数据错误"+err);
+        } else {
+            res.send({error:0,data:data})
+        }
+    })
+});
+
+
 // app.use(ejsRouter);
 //配置端口
 app.listen('8899',function () {
