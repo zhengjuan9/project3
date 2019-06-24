@@ -5,6 +5,7 @@ li {
 a {
   text-decoration: none;
   outline: none;
+  font-family: Arial;
 }
 a:hover {
   text-decoration: underline;

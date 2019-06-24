@@ -21,7 +21,7 @@ body{
   width: 1080px;
   background-color: #FFF;
   padding: 50px;
-  margin: 30px auto 60px;
+  margin: 50px auto;
 }
 .solid{
   width: 100%;
@@ -98,6 +98,7 @@ form #pay-submit {
 }
 .payment .item img {
   width: 120px;
+  margin-left: 10px;
 }
 .pay-footer {
   min-height: 50px;

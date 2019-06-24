@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./../../css/cart.css">
+    <link rel="stylesheet" href="public/css/cart.css">
 
     <title>购物车</title>
 </head>
@@ -36,7 +36,7 @@
                         <div class="item-table">
                             <div class="item-row clearfix">
                                 <div class="col col-check">
-                                    <i class="iconfont checkbox" onclick="partcheck(this)"></i>
+                                    <i class="iconfont checkbox"></i>
                                 </div>
                                 <div class="col col-img">
                                     <a href="/goods/1184400469.html" title=""><img src=" https://file02.xgimi.com/official/admin/20181115/2018111510190633217.jpg " alt="" width="80" height="80"></a>
@@ -92,5 +92,267 @@
             </div>
         </div>
     </div>
+    <script src="public/catr.js"></script>
+    <script src="public/js/jquery-3.4.0.js"></script>
+    <script src="./../../js/shopping-cart/ajax.js"></script>
+    <script>
+
+        var isUpdate = true;
+        var isCheck = true;
+        
+        //购物车信息
+        ajaxCart();
+        function ajaxCart() {
+            $.post('/cart', {
+            }, 
+            function(html) {
+                // cartNumber();
+                $('#cart-contents').empty().append(html);
+                setTimeout(function(){
+                    isUpdate = true;
+                    isCheck = true;
+                },1000);
+            }, 'html');
+        }
+        
+        // 数量增
+        function add_goods_num(obj) {
+            var t = $(obj).prev("input");
+            var inventory = parseInt($(t).attr('inventory'));
+            var num = parseInt(t.val(), 10);
+            if(num + 1 <= inventory){
+                if(isUpdate){
+                    var shoppingcartId = $(obj).prev("input").attr('shoppingcartId');
+                    var parentId = $(obj).prev("input").attr('parentid');
+                    update_cart(1, shoppingcartId, parentId);
+                    isUpdate = false;
+                 }
+            } else {
+                gm_alert('商品达到最大购买数量，无法继续添加。');
+                return;
+            }
+        
+        }
+        // 数量减
+        function reduce_goods_num(obj) {
+            var t = $(obj).next("input");
+            var num = parseInt(t.val(), 10);
+            if (num <= 1) {
+                return false;
+            }else{
+                if(isUpdate){
+                    var shoppingcartId = $(obj).next("input").attr('shoppingcartId');
+                    var parentId = $(obj).next("input").attr('parentid');
+                    update_cart(-1, shoppingcartId, parentId);
+                    isUpdate = false;
+                }
+            }
+        }
+        
+        // 输入改变数量
+        function change_goods_num(obj) {
+            var d = /^\d+$/;
+            if (!d.test($(obj).val().trim())){
+                $(obj).val('1');
+            }
+            var num = $(obj).val();
+            var origin_number = $(obj).attr('origin_number');
+            var inventory = parseInt($(obj).attr('inventory'));
+            if (num < 1) {
+                $(obj).val('1');
+                return;
+            } else if (num > inventory) {
+                gm_alert('商品达到最大购买数量，无法继续添加。');
+                $(obj).val(origin_number);
+                return;
+            }else{
+                if(isUpdate){
+                    num = $(obj).val();
+                    var changeNumber = num - origin_number;
+                    var shoppingcartId = $(obj).attr('shoppingcartId');
+                    var parentId = $(obj).attr('parentid');
+                    update_cart(changeNumber, shoppingcartId, parentId);
+                    isUpdate = false;
+                }
+            }
+        }
+        
+        // 数量请求
+        function update_cart(num, shoppingcartId, parentId) {
+            $.post('/cart', {
+                'num': num,
+                'shoppingcartId': shoppingcartId.replace(/[^0-9]/ig,""),
+                'parentId' : parentId
+            }, function(data) {
+                if(data.code == 200){
+                    ajaxCart();
+                    //广告追踪统计
+                    if (cookie.get("GM_ADTracking")) {
+                        var goodsName = $('.item-box[shoppingcartid='+shoppingcartId+']').find(".col-name").find("a").text();
+                        var skuId = $('.item-box[shoppingcartid='+shoppingcartId+']').find(".col-name").find("a").attr("href") && parseInt($('.item-box[shoppingcartid='+shoppingcartId+']').find(".col-name").find("a").attr("href").split("/")[2]);
+                        //移动端换方式获取
+                        if(!goodsName){
+                            goodsName = $('.item-box[shoppingcartid='+shoppingcartId+']').find(".cart-details").find("a:first-child").text();
+                            skuId = $('.item-box[shoppingcartid='+shoppingcartId+']').find(".cart-details").find("a:first-child").attr("href") && parseInt($('.item-box[shoppingcartid='+shoppingcartId+']').find(".cart-details").find("a:first-child").attr("href").split("/")[2]);
+                        }
+                        ADTracking(3, $.trim(skuId), $.trim(goodsName));
+                    }
+                }else{
+                    isUpdate = true;
+                    gm_alert(data.msg);
+                }
+            }, 'json');
+        
+        }
+        
+        // 加价购
+        function fittings_to_flow(obj, skuId, parentId, activityId, parentSkuId, maxAdditionalNum, hasAdditionalNum) {
+            if (maxAdditionalNum && maxAdditionalNum <= hasAdditionalNum) {
+                return gm_alert('该商品加价购最多只能购买' + maxAdditionalNum + '种商品');
+            }
+            $.post('/cart', {
+                'skuId': skuId,
+                'parentId': parentId,
+                'activityId': activityId,
+                'buyNumber': 1,
+            }, function(data) {
+                if(data.code == 200){
+                    ajaxCart();
+                }else{
+                    gm_alert(data.msg);
+                }
+            }, 'json');
+        }
+        
+        // 全选 全不选
+        function allcheck(obj) {
+            var shoppingCartIds = [];
+            if(isCheck){
+                if ($(obj).hasClass('selected')) {
+                    $('#place_order_area .item-box.goods_tr').each(function(i, elem) {
+                        shoppingCartIds.push($(this).attr('shoppingCartId').replace(/[^0-9]/ig,""));
+                    });
+                    place_shoppingcartId(shoppingCartIds, false);
+                    isCheck = false;
+                } else {
+                    $('#place_order_area .item-box.goods_tr').each(function(i, elem) {
+                        shoppingCartIds.push($(this).attr('shoppingCartId').replace(/[^0-9]/ig,""));
+                    });
+                    place_shoppingcartId(shoppingCartIds, true);
+                    isCheck = false;
+                }
+            }
+        }
+        
+        // 部分选择
+        function partcheck(obj) {
+            var shoppingCartIds = [];
+            var parent = $(obj).parent().parent().parent().parent();
+            if(isCheck){
+                if (parent.hasClass('selected')) {
+                    shoppingCartId = parent.attr('shoppingCartId');
+                    shoppingCartIds.push(shoppingCartId.replace(/[^0-9]/ig,""));
+                    place_shoppingcartId(shoppingCartIds, false);
+                    isCheck = false;
+                } else {
+                    shoppingCartId = parent.attr('shoppingCartId');
+                    shoppingCartIds.push(shoppingCartId.replace(/[^0-9]/ig,""));
+                    place_shoppingcartId(shoppingCartIds, true);
+                    isCheck = false;
+                }
+            }
+        }
+        // 选择请求
+        // function place_shoppingcartId(shoppingCartIds, isChecked) {
+        //     $.ajax({
+        //         url: 'https://shop.xgimi.com/api/checkshopids',
+        //         type: 'post',
+        //         data: {
+        //             'shoppingcartIds': shoppingCartIds,
+        //             'isChecked': isChecked
+        //         },
+        //         dataType: 'json',
+        //         success: function(data) {
+        //             if(data.code == 200){
+        //                 ajaxCart();
+        //                 return true;
+        //             }else{
+        //                 isCheck = true;
+        //                 gm_alert(data.msg);
+        //             }
+        //         },
+        //         error: function(xhr) {
+        
+        //         }
+        //     });
+        // }
+        
+        // 删除数据弹窗
+        function drop_goods(shoppingcartId, parentId) {
+            gm_confirm("你确定要删除此商品吗？","", "drop_goods_do('" + shoppingcartId + "','" + parentId + "');");
+        }
+        
+        // 删除数据
+        function drop_goods(shoppingcartId, parentId) {
+            var name = $('.goods_tr_' + shoppingcartId + ' .col-name p a').text();
+            var price = $('.goods_tr_' + shoppingcartId + ' .col-price p').text().split("元")[0];
+            var num = $('.goods_tr_' + shoppingcartId + ' .proNums').val();  
+            $.post('/cart', {
+                'shoppingCartId': shoppingcartId.replace(/[^0-9]/ig,""),
+                'parentId': parentId,
+            }, function(data) {
+                if(data.code == 200){
+                    //谷歌统计 - 移除购物车事件
+                    gtag('event', 'remove_from_cart', {
+                        "currency": "CNY",
+                        "items": [
+                            {
+                            "name": name,
+                            "quantity": parseInt(num),
+                            "price": price
+                            }
+                        ]
+                    });
+                    ajaxCart();
+                    close_msg();
+                }else{
+                    gm_alert(data.msg);
+                }
+            }, 'json');
+        }
+        
+        function updateCartInfo(html) {
+            $(".cartshow").after(html).remove();
+        }
+        
+        function changeAddress(obj_id, idx, next_id) {
+            var obj = document.getElementById(obj_id);
+            if (typeof(next_id) != 'undefined') {
+                region.changed(obj, idx, next_id);
+            }
+        }
+        
+        // 折扣方式
+        function selectReduce(obj){
+            var activityId = $(obj).val();
+            ajaxReduce(activityId);
+        }
+        
+        // 折扣方式请求
+        // function ajaxReduce(activityId){
+        //     $.post('https://shop.xgimi.com/api/reduceActivity', {
+        //         reduceActivityId:activityId
+        //     }, function(res) {
+        //         if(res.code == 200){
+        //             data = res.data;
+        //             $('#goods_total').html(data.totalPrice/100 + '元');
+        //             $('#reducePrice').html(-data.reducePrice/100 + '元');
+        //             return true;
+        //         }
+        //     }, 'json');
+        // }
+        
+        
+        </script>
 </body>
 </html>
